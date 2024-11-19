@@ -40,7 +40,8 @@
   },
   "require-dev": {
     "10up/wp_mock": "*",
-    "wpdesk/wp-plugin-flow": "^3",
+    "wpdesk/wp-plugin-flow-free": "*",
+    "wpdesk/wp-plugin-flow-common": "1.2.0",
     "phpunit/phpunit": "^8",
     "wpdesk/wp-wpdesk-composer": "^3",
     "wpdesk/wp-codeception": "^2",

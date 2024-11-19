@@ -4,7 +4,7 @@
  * Plugin URI: https://www.wpdesk.net/products/dropshipping-xml-woocommerce/
  * Description: Import wholesale products to your store. Synchronize your WooCommerce products with the current offer of your suppliers.
  * Product: Dropshipping XML for WooCommerce
- * Version: 1.6.3
+ * Version: 1.6.4
  * Author: WP Desk
  * Author URI: https://www.wpdesk.net/
  * Text Domain: dropshipping-xml-for-woocommerce
@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 } // Exit if accessed directly
 
 /* THESE TWO VARIABLES CAN BE CHANGED AUTOMATICALLY */
-$plugin_version = '1.6.3';
+$plugin_version = '1.6.4';
 $plugin_release_timestamp = '2023-11-15 15:31';
 
 $plugin_name        = 'Dropshipping XML for WooCommerce';
@@ -46,8 +46,6 @@ $plugin_text_domain = 'dropshipping-xml-for-woocommerce';
 $product_id         = 'Dropshipping XML for WooCommerce';
 $plugin_file        = __FILE__;
 $plugin_dir         = dirname( __FILE__ );
-$dummy_desc         = __( 'Import wholesale products to your store. Synchronize your WooCommerce products with the current offer of your suppliers.', 'dropshipping-xml-for-woocommerce' );
-$dummy_url          = __( 'https://www.wpdesk.net/products/dropshipping-xml-woocommerce/', 'dropshipping-xml-for-woocommerce' );
 
 $requirements = [
 	'php'     => '7.2',
@@ -60,4 +58,4 @@ $requirements = [
 	],
 ];
 
-require __DIR__ . '/vendor_prefixed/wpdesk/wp-plugin-flow/src/plugin-init-php52-free.php';
+require __DIR__ . '/vendor_prefixed/wpdesk/wp-plugin-flow-common/src/plugin-init-php52-free.php';

@@ -62,31 +62,33 @@ class Plugin extends AbstractPlugin implements LoggerAwareInterface, HookableCol
 	 * @return void
 	 */
 	public function init() {
-		parent::init();
-		$config = $this->init_config();
+		add_action('init', function(){	
+			parent::init();
+			$config = $this->init_config();
 
-		$service_container_class = $config->get_param( 'service.container' )->get();
+			$service_container_class = $config->get_param( 'service.container' )->get();
 
-		$service_container_class            = $config->get_param( 'service.container' )->get();
-		$dependency_resolver_class          = $config->get_param( 'service.resolver' )->get();
-		$dependency_binder_collection_class = $config->get_param( 'service.binder_collection' )->get();
-		$listener_collection_class          = $config->get_param( 'service.listener_collection' )->get();
+			$service_container_class            = $config->get_param( 'service.container' )->get();
+			$dependency_resolver_class          = $config->get_param( 'service.resolver' )->get();
+			$dependency_binder_collection_class = $config->get_param( 'service.binder_collection' )->get();
+			$listener_collection_class          = $config->get_param( 'service.listener_collection' )->get();
 
-		$dependency_binder = new $dependency_binder_collection_class();
-		$dependency_binder->add( $config->get_param( 'service.bind' )->get() );
-		$dependency_resolver = new $dependency_resolver_class( $dependency_binder );
+			$dependency_binder = new $dependency_binder_collection_class();
+			$dependency_binder->add( $config->get_param( 'service.bind' )->get() );
+			$dependency_resolver = new $dependency_resolver_class( $dependency_binder );
 
-		$listener_collection = new $listener_collection_class();
-		$listener_collection->add( $config->get_param( 'service.listeners' )->get() );
+			$listener_collection = new $listener_collection_class();
+			$listener_collection->add( $config->get_param( 'service.listeners' )->get() );
 
-		$service_container = new $service_container_class( $dependency_resolver, $listener_collection );
-		if ( $dependency_resolver instanceof ServiceContainerAwareInterface ) {
-			$dependency_resolver->set_service_container( $service_container );
-		}
+			$service_container = new $service_container_class( $dependency_resolver, $listener_collection );
+			if ( $dependency_resolver instanceof ServiceContainerAwareInterface ) {
+				$dependency_resolver->set_service_container( $service_container );
+			}
 
-		$service_container->add_forbidden( $config->get_param( 'service.forbidden' )->get() );
+			$service_container->add_forbidden( $config->get_param( 'service.forbidden' )->get() );
 
-		$service_container->register_from_array( $config->get_param( 'action' )->get() );
+			$service_container->register_from_array( $config->get_param( 'action' )->get() );
+		}, 9);	
 	}
 
 	/**
@@ -95,9 +97,11 @@ class Plugin extends AbstractPlugin implements LoggerAwareInterface, HookableCol
 	 * @return void
 	 */
 	public function hooks() {
-		parent::hooks();
-		$widget = new DashboardWidget();
-		$widget->hooks();
+		add_action('init', function(){	
+			parent::hooks();
+			$widget = new DashboardWidget();
+			$widget->hooks();
+		}, 9);	
 	}
 
 	/**

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit0801b19de0330ce49f29eec91ca5a5eb
+class ComposerStaticInit2c46dcc445f36aff78629b8da252ca7f
 {
     public static $prefixLengthsPsr4 = array (
         'W' => 
@@ -502,35 +502,6 @@ class ComposerStaticInit0801b19de0330ce49f29eec91ca5a5eb
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\Marketing\\Boxes\\Helpers\\Markers' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-marketing/src/Boxes/Helpers/Markers.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\Marketing\\Boxes\\MarketingBoxes' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-marketing/src/Boxes/MarketingBoxes.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\Marketing\\RatePlugin\\RateBox' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-marketing/src/RatePlugin/RateBox.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\ActivationForm\\AjaxHandler' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ActivationForm/AjaxHandler.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\ActivationForm\\FormContentRenderer' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ActivationForm/FormContentRenderer.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\ActivationForm\\PluginsPageRenderer' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ActivationForm/PluginsPageRenderer.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\ActivationForm\\Renderer' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ActivationForm/Renderer.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\Changelog\\Filter\\ByVersion' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Changelog/Filter/ByVersion.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\Changelog\\Formatter' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Changelog/Formatter.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\Changelog\\Parser' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Changelog/Parser.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\Changelog\\Parser\\Line' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Changelog/Parser/Line.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\InstalledPlugins' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/InstalledPlugins.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\LicenseManager' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/LicenseManager.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\LicenseServer\\PluginExternalBlocking' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/LicenseServer/PluginExternalBlocking.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\LicenseServer\\PluginLicense' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/LicenseServer/PluginLicense.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\LicenseServer\\PluginRegistrator' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/LicenseServer/PluginRegistrator.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\LicenseServer\\PluginUpgrade' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/LicenseServer/PluginUpgrade.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\LicenseServer\\PluginViewVersionInfo' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/LicenseServer/PluginViewVersionInfo.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\OldLicenseRegistrator' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/OldLicenseRegistrator.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\Page\\Action' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Page/Action.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\Page\\LicensePage' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Page/LicensePage.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\Page\\LicensePageActions' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Page/LicensePageActions.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\Page\\License\\Action\\AbstractAction' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Page/License/Action/AbstractAction.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\Page\\License\\Action\\ActionError' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Page/License/Action/ActionError.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\Page\\License\\Action\\LicenseActivation' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Page/License/Action/LicenseActivation.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\Page\\License\\Action\\LicenseDeactivation' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Page/License/Action/LicenseDeactivation.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\Page\\License\\Action\\Nothing' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Page/License/Action/Nothing.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\PluginLicense' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/PluginLicense.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\PluginRegistrator' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/PluginRegistrator.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\PluginRegistratorInterface' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/PluginRegistratorInterface.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\ServerAddressRepository' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ServerAddressRepository.php',
-        'DropshippingXmlFreeVendor\\WPDesk\\License\\WpUpgrader\\SubscriptionHandler' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/WpUpgrader/SubscriptionHandler.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Logger\\BasicLoggerFactory' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-logs/src/BasicLoggerFactory.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Logger\\LoggerFacade' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-logs/src/LoggerFacade.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Logger\\LoggerFactory' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-logs/src/LoggerFactory.php',
@@ -610,16 +581,11 @@ class ComposerStaticInit0801b19de0330ce49f29eec91ca5a5eb
         'DropshippingXmlFreeVendor\\WPDesk\\View\\Resolver\\Resolver' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-view/src/Resolver/Resolver.php',
         'DropshippingXmlFreeVendor\\WPDesk\\View\\Resolver\\WPThemeResolver' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-view/src/Resolver/WPThemeResolver.php',
         'DropshippingXmlFreeVendor\\WPDesk\\View\\Resolver\\WooTemplateResolver' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-view/src/Resolver/WooTemplateResolver.php',
-        'DropshippingXmlFreeVendor\\WPDesk_API_KEY' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-key-api.php',
-        'DropshippingXmlFreeVendor\\WPDesk_API_MENU' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-api-manager-menu.php',
-        'DropshippingXmlFreeVendor\\WPDesk_API_Manager_With_Update_Flag' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-api-manager.php',
-        'DropshippingXmlFreeVendor\\WPDesk_API_Password_Management' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-api-manager-passwords.php',
         'DropshippingXmlFreeVendor\\WPDesk_Basic_Requirement_Checker' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-basic-requirements/src/Basic_Requirement_Checker.php',
         'DropshippingXmlFreeVendor\\WPDesk_Basic_Requirement_Checker_Factory' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-basic-requirements/src/Basic_Requirement_Checker_Factory.php',
         'DropshippingXmlFreeVendor\\WPDesk_Basic_Requirement_Checker_With_Update_Disable' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-basic-requirements/src/Basic_Requirement_Checker_With_Update_Disable.php',
         'DropshippingXmlFreeVendor\\WPDesk_Buildable' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-builder/src/Plugin/WithoutNamespace/Buildable.php',
         'DropshippingXmlFreeVendor\\WPDesk_Has_Plugin_Info' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-builder/src/Plugin/WithoutNamespace/Has_Plugin_Info.php',
-        'DropshippingXmlFreeVendor\\WPDesk_Helper_List_Table' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/Page/License/views/class-wpdesk-helper-list-table.php',
         'DropshippingXmlFreeVendor\\WPDesk_Logger' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-logs/src/deprecated/wpdesk-logger.php',
         'DropshippingXmlFreeVendor\\WPDesk_Logger_Factory' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-logs/src/deprecated/wpdesk-logger-factory.php',
         'DropshippingXmlFreeVendor\\WPDesk_Plugin_Info' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-builder/src/Plugin/WithoutNamespace/Plugin_Info.php',
@@ -657,7 +623,6 @@ class ComposerStaticInit0801b19de0330ce49f29eec91ca5a5eb
         'DropshippingXmlFreeVendor\\WPDesk_Tracker_Sender_Wordpress_To_WPDesk' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-tracker/src/sender/class-wpdesk-tracker-sender-wordpress-to-wpdesk.php',
         'DropshippingXmlFreeVendor\\WPDesk_Translable' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-builder/src/Plugin/WithoutNamespace/Translable.php',
         'DropshippingXmlFreeVendor\\WPDesk_Translatable' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-builder/src/Plugin/WithoutNamespace/Translatable.php',
-        'DropshippingXmlFreeVendor\\WPDesk_Update_API_Check' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-wpdesk-license/src/ApiManager/class-wc-plugin-update.php',
         'Psr\\Container\\ContainerExceptionInterface' => __DIR__ . '/..' . '/psr/container/src/ContainerExceptionInterface.php',
         'Psr\\Container\\ContainerInterface' => __DIR__ . '/..' . '/psr/container/src/ContainerInterface.php',
         'Psr\\Container\\NotFoundExceptionInterface' => __DIR__ . '/..' . '/psr/container/src/NotFoundExceptionInterface.php',
@@ -694,9 +659,9 @@ class ComposerStaticInit0801b19de0330ce49f29eec91ca5a5eb
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit0801b19de0330ce49f29eec91ca5a5eb::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit0801b19de0330ce49f29eec91ca5a5eb::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit0801b19de0330ce49f29eec91ca5a5eb::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit2c46dcc445f36aff78629b8da252ca7f::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit2c46dcc445f36aff78629b8da252ca7f::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit2c46dcc445f36aff78629b8da252ca7f::$classMap;
 
         }, null, ClassLoader::class);
     }

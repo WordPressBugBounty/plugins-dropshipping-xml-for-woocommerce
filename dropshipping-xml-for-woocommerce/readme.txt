@@ -5,7 +5,7 @@ Tags: import products, dropshipping, woocommerce import products, woocommerce dr
 Requires at least: 5.2
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.6.3
+Stable tag: 1.6.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -352,6 +352,9 @@ Yes. Check out our [**free WooCommerce plugins &rarr;**](https://profiles.wordpr
 30. Use a step-by-step guide to import and bulk update products in WooCommerce
 
 == Changelog ==
+
+= 1.6.4 - 2024-11-19 =
+* Fix translations
 
 = 1.6.3 - 2024-11-15 =
 * Fix translations missing on non-english websites
