@@ -51,6 +51,7 @@ class ImportMapperFormProcessAction extends ImportMapperFormProcessActionCore {
 	private function save_form_data() {
 		$uid  = $this->request->get_param( 'get.uid' )->getAsString();
 		$post = $this->request->get_param( 'post.' . ImportMapperForm::get_id() )->get();
+		$post = array_map( 'stripslashes_deep', $post );
 
 		foreach ( $this->get_fields_to_remove() as $field ) {
 			if ( isset( $post[ $field ] ) ) {

@@ -74,7 +74,9 @@ class ImportOptionsFormProcessAction implements Conditional, Initable
     private function save_form_data()
     {
         $uid = $this->request->get_param('get.uid')->getAsString();
-        $this->form->handle_request($this->request->get_param('post.' . ImportOptionsForm::get_id())->get());
+        $form_fields = $this->request->get_param('post.' . ImportOptionsForm::get_id())->get();
+        $form_fields = array_map('stripslashes_deep', $form_fields);
+        $this->form->handle_request($form_fields);
         if ($this->form->is_valid() && current_user_can('manage_options')) {
             $data_provider = $this->data_provider_factory->create_by_class_name(ImportOptionsDataProvider::class, ['postfix' => $uid]);
             $data_provider->update($this->form);
