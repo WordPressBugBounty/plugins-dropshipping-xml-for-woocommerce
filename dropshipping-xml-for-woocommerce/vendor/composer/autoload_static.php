@@ -201,6 +201,7 @@ class ComposerStaticInit2c46dcc445f36aff78629b8da252ca7f
         'DropshippingXmlFreeVendor\\WPDesk\\Composer\\Codeception\\Commands\\BaseCommand' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-codeception/src/WPDesk/Composer/Commands/BaseCommand.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Composer\\Codeception\\Commands\\Configuration' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-codeception/src/WPDesk/Composer/Commands/Configuration.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Composer\\Codeception\\Commands\\CreateCodeceptionTests' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-codeception/src/WPDesk/Composer/Commands/CreateCodeceptionTests.php',
+        'DropshippingXmlFreeVendor\\WPDesk\\Composer\\Codeception\\Commands\\Language' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-codeception/src/WPDesk/Composer/Commands/Language.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Composer\\Codeception\\Commands\\LocalCodeceptionTrait' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-codeception/src/WPDesk/Composer/Commands/LocalCodeceptionTrait.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Composer\\Codeception\\Commands\\PrepareCodeceptionDb' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-codeception/src/WPDesk/Composer/Commands/PrepareCodeceptionDb.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Composer\\Codeception\\Commands\\PrepareLocalCodeceptionTests' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/wp-codeception/src/WPDesk/Composer/Commands/PrepareLocalCodeceptionTests.php',

@@ -14,7 +14,6 @@ class ProductDAO
 {
     const PRODUCT_IMPORT_ID_META = 'import_uid';
     const PRODUCT_IMPORT_STARTED_AT_META = 'import_started_at';
-    const PRODUCT_IMPORT_NAME = 'import_started_at';
     const HAS_PARENT_META_KEY = 'has_parent';
     const HAS_PARENT_VALUE_YES = 'yes';
     const HAS_PARENT_VALUE_NO = 'no';
@@ -82,7 +81,7 @@ class ProductDAO
     public function find_not_imported_products(string $uid, int $started_at, int $limit = 50, bool $without_empty_stock = \false): array
     {
         $result = [];
-        $meta_query = ['relation' => 'AND', ['key' => self::PRODUCT_IMPORT_ID_META, 'value' => $uid, 'compare' => 'LIKE'], ['key' => self::PRODUCT_IMPORT_STARTED_AT_META, 'value' => $started_at, 'compare' => 'NOT LIKE']];
+        $meta_query = ['relation' => 'AND', ['key' => self::PRODUCT_IMPORT_ID_META, 'value' => $uid, 'compare' => '='], ['key' => self::PRODUCT_IMPORT_STARTED_AT_META, 'value' => $started_at, 'compare' => '!=']];
         if ($without_empty_stock) {
             $meta_query[] = ['key' => '_stock_status', 'value' => 'outofstock', 'compare' => 'NOT LIKE'];
         }

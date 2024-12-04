@@ -208,9 +208,9 @@ class ProductCreatorService
     {
         $options_data_provider = $this->data_provider_factory->create_by_class_name(ImportOptionsDataProvider::class, ['postfix' => $file_import->get_uid()]);
         $has_no_option_to_clean = ImportOptionsFormFields::OPTION_NO_PRODUCT_DO_NOTHING === $options_data_provider->get(ImportOptionsFormFields::FIELD_REMOVED_PRODUCTS);
+        $wc_product->update_meta_data(ProductDAO::PRODUCT_IMPORT_STARTED_AT_META, $file_import->get_start_date());
         if ($this->is_created() || !$has_no_option_to_clean) {
             $wc_product->update_meta_data(ProductDAO::PRODUCT_IMPORT_ID_META, $file_import->get_uid());
-            $wc_product->update_meta_data(ProductDAO::PRODUCT_IMPORT_STARTED_AT_META, $file_import->get_start_date());
         }
         return $wc_product;
     }

@@ -88,7 +88,7 @@ class Plugin extends AbstractPlugin implements LoggerAwareInterface, HookableCol
 			$service_container->add_forbidden( $config->get_param( 'service.forbidden' )->get() );
 
 			$service_container->register_from_array( $config->get_param( 'action' )->get() );
-		}, 9);	
+		}, 0);	
 	}
 
 	/**

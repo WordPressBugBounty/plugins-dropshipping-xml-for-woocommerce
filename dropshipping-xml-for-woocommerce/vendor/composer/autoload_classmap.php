@@ -173,6 +173,7 @@ return array(
     'DropshippingXmlFreeVendor\\WPDesk\\Composer\\Codeception\\Commands\\BaseCommand' => $baseDir . '/vendor_prefixed/wpdesk/wp-codeception/src/WPDesk/Composer/Commands/BaseCommand.php',
     'DropshippingXmlFreeVendor\\WPDesk\\Composer\\Codeception\\Commands\\Configuration' => $baseDir . '/vendor_prefixed/wpdesk/wp-codeception/src/WPDesk/Composer/Commands/Configuration.php',
     'DropshippingXmlFreeVendor\\WPDesk\\Composer\\Codeception\\Commands\\CreateCodeceptionTests' => $baseDir . '/vendor_prefixed/wpdesk/wp-codeception/src/WPDesk/Composer/Commands/CreateCodeceptionTests.php',
+    'DropshippingXmlFreeVendor\\WPDesk\\Composer\\Codeception\\Commands\\Language' => $baseDir . '/vendor_prefixed/wpdesk/wp-codeception/src/WPDesk/Composer/Commands/Language.php',
     'DropshippingXmlFreeVendor\\WPDesk\\Composer\\Codeception\\Commands\\LocalCodeceptionTrait' => $baseDir . '/vendor_prefixed/wpdesk/wp-codeception/src/WPDesk/Composer/Commands/LocalCodeceptionTrait.php',
     'DropshippingXmlFreeVendor\\WPDesk\\Composer\\Codeception\\Commands\\PrepareCodeceptionDb' => $baseDir . '/vendor_prefixed/wpdesk/wp-codeception/src/WPDesk/Composer/Commands/PrepareCodeceptionDb.php',
     'DropshippingXmlFreeVendor\\WPDesk\\Composer\\Codeception\\Commands\\PrepareLocalCodeceptionTests' => $baseDir . '/vendor_prefixed/wpdesk/wp-codeception/src/WPDesk/Composer/Commands/PrepareLocalCodeceptionTests.php',

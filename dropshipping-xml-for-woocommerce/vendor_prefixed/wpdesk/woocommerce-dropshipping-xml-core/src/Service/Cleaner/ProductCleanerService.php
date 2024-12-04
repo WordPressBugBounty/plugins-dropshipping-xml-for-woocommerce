@@ -69,6 +69,10 @@ class ProductCleanerService
         $stock_action = $this->options_data_provider->has(ImportOptionsFormFields::FIELD_REMOVED_PRODUCTS) ? $this->options_data_provider->get(ImportOptionsFormFields::FIELD_REMOVED_PRODUCTS) : ImportOptionsFormFields::OPTION_NO_PRODUCT_DO_NOTHING;
         $leave_main_product = ImportOptionsFormFields::OPTION_NO_PRODUCT_DO_NOTHING === $stock_action;
         $is_variable = ImportMapperFormFields::PRODUCT_TYPE_OPTION_VARIABLE === $mapper_data_provider->get(ImportMapperFormFields::PRODUCT_TYPE);
+        if (\true === $leave_main_product) {
+            $this->finish_cleaner();
+            return $file_import;
+        }
         while (\false === $this->is_cleaner_should_finish() && \false === $file_import->is_cleaner_finished()) {
             $products = [];
             if ($is_variable) {
@@ -78,7 +82,7 @@ class ProductCleanerService
                 }
             }
             if (empty($products)) {
-                $products = \true === $leave_main_product ? [] : $this->product_cleaner($file_import, $stock_action);
+                $products = $this->product_cleaner($file_import, $stock_action);
             }
             if (empty($products)) {
                 $this->finish_cleaner();
