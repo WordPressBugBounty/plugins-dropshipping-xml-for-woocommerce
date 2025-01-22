@@ -14,6 +14,7 @@ use Exception;
  */
 class FileLocatorService
 {
+    public const LOG_FILE_EXTENSION = 'log';
     /**
      * @var Config
      */
@@ -39,6 +40,21 @@ class FileLocatorService
             throw new RuntimeException('Directory traversal security error');
         }
         return new FileObject($file_location);
+    }
+    public function get_log_file(string $uid): FileObject
+    {
+        $tmp_dir = $this->get_tmp_dir($uid);
+        $file_location = $tmp_dir . $uid . '.' . self::LOG_FILE_EXTENSION;
+        try {
+            $file = new FileObject($file_location);
+        } catch (Exception $e) {
+            \file_put_contents($file_location, '');
+            $file = new FileObject($file_location);
+        }
+        if (!$this->is_path_secure($tmp_dir, $file_location)) {
+            throw new RuntimeException('Directory traversal security error');
+        }
+        return $file;
     }
     public function is_source_file_exists(string $uid): bool
     {

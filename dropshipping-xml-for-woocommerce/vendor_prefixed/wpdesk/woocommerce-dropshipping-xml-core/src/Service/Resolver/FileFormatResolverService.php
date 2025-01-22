@@ -7,6 +7,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\File\FileObject
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Data\DataFormat;
 /**
  * Class FileFormatResolverService
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Service\Resolver
  */
 class FileFormatResolverService

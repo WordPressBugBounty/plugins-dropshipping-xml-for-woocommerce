@@ -4,6 +4,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Condition
 
 /**
  * intreface ConditionalLogic
+ *
  * @package WPDesk\Library\DropshippingXmlCore\ConditionalLogic
  */
 interface ConditionalLogic

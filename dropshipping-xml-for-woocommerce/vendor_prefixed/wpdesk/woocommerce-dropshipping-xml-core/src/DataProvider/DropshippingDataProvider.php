@@ -10,6 +10,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Provider\Abstraction\DataProvider;
 /**
  * Class DropshippingDataProvider
+ *
  * @package WPDesk\Library\DropshippingXmlCore\DataProvider
  */
 abstract class DropshippingDataProvider extends DataProvider

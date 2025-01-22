@@ -55,6 +55,7 @@ class ProductEmbeddedMapperService implements ProductMapperServiceInterface
         $wc_product = $this->update_shipping($wc_product);
         $wc_product = $this->update_sku($wc_product);
         $wc_product = $this->update_ean($wc_product);
+        $wc_product = $this->update_unique_custom_product_id($wc_product);
         return $wc_product;
     }
     private function is_field_mapped_by_parent(string $string): bool
@@ -92,11 +93,19 @@ class ProductEmbeddedMapperService implements ProductMapperServiceInterface
         }
         return $wc_product;
     }
+    private function update_unique_custom_product_id(WC_Product $wc_product): WC_Product
+    {
+        if ($this->mapper->has_value_to_map(VariationComponent::PRODUCT_CUSTOM_ID, ImportMapperFormFields::VARIATION_EMBEDDED)) {
+            $custom_id = wc_clean(trim($this->mapper->map(VariationComponent::PRODUCT_CUSTOM_ID, ImportMapperFormFields::VARIATION_EMBEDDED)));
+            $wc_product->update_meta_data(ProductDAO::PRODUCT_CUSTOM_ID_META, esc_html($custom_id));
+        }
+        return $wc_product;
+    }
     private function update_ean(WC_Product $wc_product): WC_Product
     {
         if ($this->mapper->has_value_to_map(VariationComponent::PRODUCT_EAN, ImportMapperFormFields::VARIATION_EMBEDDED)) {
             $ean = wc_clean(trim($this->mapper->map(VariationComponent::PRODUCT_EAN, ImportMapperFormFields::VARIATION_EMBEDDED)));
-            FlexibleEanIntegration::add_ean_field($wc_product, $ean);
+            ProductDAO::add_ean_field($wc_product, $ean);
         }
         return $wc_product;
     }
@@ -107,7 +116,7 @@ class ProductEmbeddedMapperService implements ProductMapperServiceInterface
             if ($this->is_field_mapped_by_parent(VariationComponent::PRODUCT_PARENT_OPTIONS_REGULAR_PRICE_VALUE)) {
                 $wc_product->set_price($this->variable->get_price());
                 $wc_product->set_regular_price($this->variable->get_regular_price());
-            } else if ($this->mapper->has_value_to_map(VariationComponent::PRODUCT_PRICE, ImportMapperFormFields::VARIATION_EMBEDDED)) {
+            } elseif ($this->mapper->has_value_to_map(VariationComponent::PRODUCT_PRICE, ImportMapperFormFields::VARIATION_EMBEDDED)) {
                 if (!empty($this->format_number($this->mapper->map(VariationComponent::PRODUCT_PRICE, ImportMapperFormFields::VARIATION_EMBEDDED)))) {
                     $calculated_price = $this->get_regular_price();
                     $wc_product->set_price(strval($calculated_price));
@@ -119,7 +128,7 @@ class ProductEmbeddedMapperService implements ProductMapperServiceInterface
         if ($this->mapper->is_product_field_group_should_be_mapped($wc_product, ImportOptionsFormFields::SYNC_FIELD_OPTION_GENERAL_SALE_PRICE)) {
             if ($this->is_field_mapped_by_parent(VariationComponent::PRODUCT_PARENT_OPTIONS_SALE_PRICE_VALUE)) {
                 $wc_product->set_sale_price($this->variable->get_sale_price());
-            } else if ($this->mapper->has_value_to_map(ImportMapperFormFields::PRODUCT_SALE_PRICE, ImportMapperFormFields::VARIATION_EMBEDDED)) {
+            } elseif ($this->mapper->has_value_to_map(ImportMapperFormFields::PRODUCT_SALE_PRICE, ImportMapperFormFields::VARIATION_EMBEDDED)) {
                 $calculated_price = $this->get_sale_price();
                 $wc_product->set_sale_price(strval($calculated_price));
             }
@@ -237,7 +246,7 @@ class ProductEmbeddedMapperService implements ProductMapperServiceInterface
                     if ($this->mapper->has_value_to_map(ImportMapperFormFields::PRODUCT_BACKORDERS, ImportMapperFormFields::VARIATION_EMBEDDED)) {
                         $wc_product->set_backorders($this->mapper->map(ImportMapperFormFields::PRODUCT_BACKORDERS, ImportMapperFormFields::VARIATION_EMBEDDED));
                     }
-                } else if ($this->mapper->has_value_to_map(VariationComponent::PRODUCT_STOCK_STATUS, ImportMapperFormFields::VARIATION_EMBEDDED)) {
+                } elseif ($this->mapper->has_value_to_map(VariationComponent::PRODUCT_STOCK_STATUS, ImportMapperFormFields::VARIATION_EMBEDDED)) {
                     $wc_product->set_stock_status($this->mapper->map(VariationComponent::PRODUCT_STOCK_STATUS, ImportMapperFormFields::VARIATION_EMBEDDED));
                 }
             }

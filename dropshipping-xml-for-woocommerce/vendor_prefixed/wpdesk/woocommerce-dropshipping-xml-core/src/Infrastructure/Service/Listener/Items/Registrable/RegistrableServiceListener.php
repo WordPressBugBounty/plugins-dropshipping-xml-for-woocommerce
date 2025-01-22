@@ -6,6 +6,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Service\Container\Abstraction\ServiceContainerInterface;
 /**
  * Class RegistrableServiceListener, register class or object as services.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Service\Listener\Registrable
  */
 final class RegistrableServiceListener extends AbstractServiceListener

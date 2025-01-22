@@ -46,7 +46,7 @@ class ImportPostTypeLoaderAction implements Hookable, Conditional
      */
     public function register_post_type()
     {
-        $args = array('description' => __('Manage Dropshipping Xml.', 'dropshipping-xml-for-woocommerce'), 'public' => \false, 'publicly_queryable' => \false, 'show_ui' => \false, 'show_in_menu' => \false, 'query_var' => \true, 'has_archive' => \false, 'hierarchical' => \false, 'show_in_rest' => \false);
+        $args = ['description' => __('Manage Dropshipping Xml.', 'dropshipping-xml-for-woocommerce'), 'public' => \false, 'publicly_queryable' => \false, 'show_ui' => \false, 'show_in_menu' => \false, 'query_var' => \true, 'has_archive' => \false, 'hierarchical' => \false, 'show_in_rest' => \false];
         register_post_type(Import::POST_TYPE_SLUG, $args);
     }
 }

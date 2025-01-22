@@ -5,6 +5,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastru
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\File\FileObject;
 /**
  * Class Client, abstraction layer for connector client.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Connector\Client
  */
 interface Connector

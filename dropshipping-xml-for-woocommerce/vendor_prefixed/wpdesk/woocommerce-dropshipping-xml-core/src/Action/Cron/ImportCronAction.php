@@ -32,9 +32,9 @@ class ImportCronAction implements Hookable
     }
     public function hooks()
     {
-        add_filter('cron_schedules', array($this, 'cron_schedules'));
-        add_action('init', array($this, 'register_cron'));
-        add_action(self::CRON_ACTION, array($this->import_process, 'process'));
+        add_filter('cron_schedules', [$this, 'cron_schedules']);
+        add_action('init', [$this, 'register_cron']);
+        add_action(self::CRON_ACTION, [$this->import_process, 'process']);
     }
     public function register_cron()
     {
@@ -44,7 +44,7 @@ class ImportCronAction implements Hookable
     }
     public function cron_schedules($schedules): array
     {
-        $schedules['every_minute'] = array('interval' => 60, 'display' => __('Every minute'));
+        $schedules['every_minute'] = ['interval' => 60, 'display' => __('Every minute')];
         return $schedules;
     }
 }

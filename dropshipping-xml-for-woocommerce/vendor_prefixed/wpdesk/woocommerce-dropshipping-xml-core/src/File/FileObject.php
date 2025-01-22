@@ -6,6 +6,7 @@ use SplFileObject;
 use RuntimeException;
 /**
  * Class FileObject, file class.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\File
  */
 class FileObject extends SplFileObject

@@ -9,6 +9,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Validator\DataFormat\DataFormatValidator;
 /**
  * Class XmlDataFormatValidator, xml data format validator.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Validator\DataFormat
  */
 class XmlDataFormatValidator implements DataFormatValidator

@@ -9,6 +9,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Validator\DataF
 use RuntimeException;
 /**
  * Class DataFormatValidatorFactory, factory for data format validators.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Factory
  */
 class DataFormatValidatorFactory

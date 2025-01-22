@@ -15,6 +15,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\ConditionalLogi
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\ConditionalLogic\NotEqualConditionalLogic;
 /**
  * Class ConditionalLogicFactory, factory for conditional logic.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Factory
  */
 class ConditionalLogicFactory

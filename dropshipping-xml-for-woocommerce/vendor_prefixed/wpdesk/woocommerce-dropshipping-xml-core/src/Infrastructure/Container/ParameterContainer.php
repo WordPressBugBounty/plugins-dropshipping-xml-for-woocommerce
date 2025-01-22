@@ -6,6 +6,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Data\DataType;
 /**
  * Class ParameterContainer
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Container
  */
 class ParameterContainer

@@ -6,14 +6,15 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\ConditionalLogi
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Form\Fields\Component\ConditionalLogicComponent;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Exception\ConditionalLogicNoValueException;
 /**
- * 
+ *
  * class EmptyConditionalLogic
+ *
  * @package WPDesk\Library\DropshippingXmlCore\ConditionalLogic
  */
 class EmptyConditionalLogic implements ConditionalLogic
 {
     /**
-     * 
+     *
      * @var string
      */
     private $xpath_value;

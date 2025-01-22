@@ -5,6 +5,8 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\DAO;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\DAO\Exception\NotFoundException;
 use WC_Product_Factory;
 use WC_Product;
+use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Integration\FlexibleEanIntegration;
+use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Form\Fields\ImportMapperFormFields;
 /**
  * Class ProductDAO, data access object class for woocommerce products.
  *
@@ -17,6 +19,7 @@ class ProductDAO
     const HAS_PARENT_META_KEY = 'has_parent';
     const HAS_PARENT_VALUE_YES = 'yes';
     const HAS_PARENT_VALUE_NO = 'no';
+    const PRODUCT_CUSTOM_ID_META = 'custom_id';
     const RESYNC_META_KEY = 'resync';
     const RESYNC_VALUE_YES = 'yes';
     const RESYNC_VALUE_NO = 'no';
@@ -44,6 +47,31 @@ class ProductDAO
         }
         return $this->wc_factory->get_product($post_id);
     }
+    public static function add_ean_field(WC_Product $product, string $ean): WC_Product
+    {
+        if (defined('WC_VERSION') && version_compare(\WC_VERSION, '9.2.0', '>=')) {
+            $product->set_global_unique_id(wc_clean($ean));
+        } else {
+            $product->update_meta_data(FlexibleEanIntegration::META_KEY, wc_clean($ean));
+        }
+        return $product;
+    }
+    public function find_by_ean(string $ean): WC_Product
+    {
+        $post_id = null;
+        if (defined('WC_VERSION') && version_compare(\WC_VERSION, '9.2.0', '>=')) {
+            $post_id = wc_get_product_id_by_global_unique_id(esc_html($ean));
+        } else {
+            $posts_ids = get_posts(['posts_per_page' => 1, 'post_type' => ['product', 'product_variation'], 'fields' => 'ids', 'post_status' => ['publish', 'draft'], 'meta_query' => [['key' => FlexibleEanIntegration::META_KEY, 'value' => esc_html($ean), 'compare' => '=']]]);
+            if (\is_array($posts_ids) && !empty($posts_ids)) {
+                $post_id = reset($posts_ids);
+            }
+        }
+        if (empty($post_id)) {
+            throw new NotFoundException('Error, product not exists');
+        }
+        return $this->wc_factory->get_product($post_id);
+    }
     public function generate_custom_id(string $uid): string
     {
         return 'custom_id_' . $uid;
@@ -55,6 +83,15 @@ class ProductDAO
     public function find_by_group_id(string $uid, $id): WC_Product
     {
         $posts_ids = get_posts(['posts_per_page' => 1, 'post_type' => 'product', 'fields' => 'ids', 'post_status' => ['publish', 'draft'], 'meta_query' => [['key' => $this->generate_group_id($uid), 'value' => $id, 'compare' => '=']]]);
+        if (empty($posts_ids)) {
+            throw new NotFoundException('Error, product not exists');
+        }
+        $post_id = reset($posts_ids);
+        return $this->wc_factory->get_product($post_id);
+    }
+    public function find_by_unique_custom_id(string $id): WC_Product
+    {
+        $posts_ids = get_posts(['posts_per_page' => 1, 'post_type' => ['product', 'product_variation'], 'fields' => 'ids', 'post_status' => ['publish', 'draft'], 'meta_query' => [['key' => self::PRODUCT_CUSTOM_ID_META, 'value' => esc_html($id), 'compare' => '=']]]);
         if (empty($posts_ids)) {
             throw new NotFoundException('Error, product not exists');
         }

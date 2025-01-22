@@ -58,7 +58,7 @@ class CsvFileConverter implements FileConverterInterface
                         }
                     }
                     $this->create_node_element($xml_writer, $columns, $data);
-                    $generated_elements++;
+                    ++$generated_elements;
                 }
             }
             fclose($handle);
@@ -118,6 +118,7 @@ class CsvFileConverter implements FileConverterInterface
     {
         $result_string = preg_replace('#<!\[CDATA\[(.+?)\]\]>#s', '', $string);
         $result_string = iconv($this->get_source_encoding(), $this->get_encoding() . '//IGNORE', $result_string);
+        $result_string = $this->strip_invalid_string($result_string);
         $result_string = apply_filters(self::FILTER_ENCODE_STRING, $result_string, $string);
         return \is_string($result_string) ? $result_string : '';
     }
@@ -137,8 +138,27 @@ class CsvFileConverter implements FileConverterInterface
         $string = preg_replace('~[^-\w]+~', '', $string);
         $string = trim($string, '-');
         $string = preg_replace('~-+~', '-', $string);
+        $string = $this->strip_invalid_string($string);
         $string = apply_filters(self::FILTER_COLUMN_NAME, $string, $raw_string);
         return $string;
+    }
+    private function strip_invalid_string(string $value): string
+    {
+        $ret = '';
+        $current = null;
+        if (empty($value)) {
+            return $ret;
+        }
+        $length = strlen($value);
+        for ($i = 0; $i < $length; $i++) {
+            $current = ord($value[$i]);
+            if ($current == 0x9 || $current == 0xa || $current == 0xd || $current >= 0x20 && $current <= 0xd7ff || $current >= 0xe000 && $current <= 0xfffd || $current >= 0x10000 && $current <= 0x10ffff) {
+                $ret .= chr($current);
+            } else {
+                $ret .= ' ';
+            }
+        }
+        return $ret;
     }
     private function get_encoding(): string
     {

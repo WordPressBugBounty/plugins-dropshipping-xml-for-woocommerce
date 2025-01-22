@@ -6,6 +6,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Entity\Import;
 /**
  * Class ImportFactory, import factory class.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Factory
  */
 class ImportFactory

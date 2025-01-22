@@ -4,6 +4,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastru
 
 /**
  * Interface FormIdentity, add get_id method to form.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\View
  */
 interface FormIdentity

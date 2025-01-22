@@ -4,6 +4,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastru
 
 /**
  * Interface Renderable, add render method to view.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\View
  */
 interface Renderable

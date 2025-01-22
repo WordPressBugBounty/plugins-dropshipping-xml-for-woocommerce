@@ -5,6 +5,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Validator
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\File\FileObject;
 /**
  * Class DataFormatValidator, abstraction layer for data format validators.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Validator\DataFormat
  */
 interface DataFormatValidator

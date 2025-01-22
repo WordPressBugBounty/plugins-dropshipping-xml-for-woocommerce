@@ -6,6 +6,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Form\ImportXmlS
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Provider\Abstraction\DataProvider;
 /**
  * Class ImportXmlSelectorDataProvider, import xml selector data provider.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\DataProvider
  */
 class ImportXmlSelectorDataProvider extends DropshippingDataProvider

@@ -5,6 +5,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Converter
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\File\FileObject;
 /**
  * Interface FileConverterInterface, file converter interface.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Converter\File
  */
 interface FileConverterInterface

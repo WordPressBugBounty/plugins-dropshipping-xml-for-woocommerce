@@ -7,6 +7,7 @@ use InvalidArgumentException;
 use OutOfBoundsException;
 /**
  * Class AbstractMenu, abstraction layer for menus.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Menu
  */
 abstract class AbstractMenu implements MenuInterface
@@ -31,7 +32,7 @@ abstract class AbstractMenu implements MenuInterface
     /**
      * @var array
      */
-    protected $views = array();
+    protected $views = [];
     /**
      * @var bool
      */

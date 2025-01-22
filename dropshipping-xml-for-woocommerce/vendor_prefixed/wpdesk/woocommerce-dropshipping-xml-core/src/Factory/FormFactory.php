@@ -11,6 +11,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Form\ImportXmlS
 use RuntimeException;
 /**
  * Class FormFactory, form factory.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Factory
  */
 class FormFactory

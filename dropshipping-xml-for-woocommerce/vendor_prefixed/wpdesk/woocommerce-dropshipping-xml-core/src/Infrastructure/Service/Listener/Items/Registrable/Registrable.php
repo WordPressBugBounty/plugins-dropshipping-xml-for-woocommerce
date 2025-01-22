@@ -4,6 +4,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastru
 
 /**
  * Interface Registrable, return array with class names that should be registered to service container.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Service\Listener\Registrable
  */
 interface Registrable

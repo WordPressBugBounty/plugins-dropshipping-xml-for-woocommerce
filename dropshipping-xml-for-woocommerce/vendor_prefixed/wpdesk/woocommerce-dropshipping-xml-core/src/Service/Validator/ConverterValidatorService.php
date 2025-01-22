@@ -6,6 +6,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Service\Locator
 use InvalidArgumentException;
 /**
  * Class ConverterValidatorService, validator for converter service.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Service\Validator
  */
 class ConverterValidatorService

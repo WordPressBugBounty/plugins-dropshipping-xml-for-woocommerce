@@ -4,6 +4,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Converter
 
 /**
  * Interface SeparatorInterface, separator interface for converter.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Converter\File
  */
 interface SeparatorInterface

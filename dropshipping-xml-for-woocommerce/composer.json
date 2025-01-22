@@ -25,7 +25,8 @@
       "wpdesk/wp-wpdesk-composer": true,
       "kylekatarnls/update-helper": true,
       "wpdesk/wp-codeception": true,
-      "cweagans/composer-patches": true
+      "cweagans/composer-patches": true,
+      "phpstan/extension-installer": true
     },
 		"platform-check": false,
 		"gitlab-domains": ["gitlab.wpdesk.dev"]
@@ -40,17 +41,18 @@
   },
   "require-dev": {
     "10up/wp_mock": "*",
-    "wpdesk/wp-plugin-flow-free": "*",
-    "wpdesk/wp-plugin-flow-common": "1.2.0",
     "phpunit/phpunit": "^8",
-    "wpdesk/wp-wpdesk-composer": "^3",
+    "wpdesk/ltv-dashboard-widget": "^1",
+    "wpdesk/phpstan-rules": "^1.2",
+    "wpdesk/woocommerce-dropshipping-xml-core": "^1.7",
     "wpdesk/wp-codeception": "^2",
     "wpdesk/wp-forms": "^2",
-    "wpdesk/wp-persistence": "2.1.4",
-    "wpdesk/wp-view": "^2",
     "wpdesk/wp-helpscout-beacon": "^1.2",
-    "wpdesk/woocommerce-dropshipping-xml-core": "^1.7",
-    "wpdesk/ltv-dashboard-widget": "^1"
+    "wpdesk/wp-persistence": "2.1.4",
+    "wpdesk/wp-plugin-flow-common": "1.2.0",
+    "wpdesk/wp-plugin-flow-free": "*",
+    "wpdesk/wp-view": "^2",
+    "wpdesk/wp-wpdesk-composer": "^3"
   },
   "extra": {
     "text-domain": "dropshipping-xml-for-woocommerce",

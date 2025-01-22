@@ -5,6 +5,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\DataProvi
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Form\ImportSidebarForm;
 /**
  * Class ImportSidebarDataProvider, import options data provider.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\DataProvider
  */
 class ImportSidebarDataProvider extends DropshippingDataProvider

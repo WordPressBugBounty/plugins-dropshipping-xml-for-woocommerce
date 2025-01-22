@@ -6,6 +6,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Form\ImportFile
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Provider\Abstraction\DataProvider;
 /**
  * Class ImportFileDataProvider, import file data provider.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\DataProvider
  */
 class ImportFileDataProvider extends DropshippingDataProvider

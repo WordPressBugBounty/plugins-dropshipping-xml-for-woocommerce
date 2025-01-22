@@ -32,7 +32,7 @@ class AdminMenuLoaderAction implements Hookable, Conditional
     }
     public function hooks()
     {
-        add_action('admin_menu', array($this, 'adminMenu'), 10);
+        add_action('admin_menu', [$this, 'adminMenu'], 10);
     }
     public function adminMenu()
     {
@@ -55,7 +55,7 @@ class AdminMenuLoaderAction implements Hookable, Conditional
         global $submenu;
         add_menu_page($menu->get_title(), $menu->get_title(), $menu->get_capability(), $menu->get_slug(), [$this->view, 'show'], $menu->get_icon(), $menu->get_position());
         if ($menu->is_hidden()) {
-            $submenu[$menu->get_slug()] = array();
+            $submenu[$menu->get_slug()] = [];
         }
     }
     private function create_sub_menu(SubMenuInterface $menu)

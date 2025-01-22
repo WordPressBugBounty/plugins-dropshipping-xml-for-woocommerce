@@ -6,6 +6,7 @@ use DropshippingXmlFreeVendor\Psr\Container\ContainerInterface;
 use OutOfBoundsException;
 /**
  * Interface ServiceContainerInterface abstraction class for service container.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Container
  */
 interface ServiceContainerInterface extends ContainerInterface
@@ -44,17 +45,18 @@ interface ServiceContainerInterface extends ContainerInterface
     public function register_from_array(array $services);
     /**
      * Replace service in container.
+     *
      * @param object $object instance that should be placed inside the container.
      * @param string $class_name parent class or interface of $object parameter.
      *
      * @return object
-     *
      */
     public function replace($object, string $class_name);
     /**
      * Add forbidden services that will not be available from service container.
+     *
      * @param array $forbidden in below format.
-     * 	[
+     *  [
      *  'class_name',
      *   ...
      * ]

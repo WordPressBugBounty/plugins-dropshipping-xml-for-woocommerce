@@ -6,6 +6,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Form\SettingsFo
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Provider\Abstraction\DataProvider;
 /**
  * Class SettingsDataProvider, settings data provider.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\DataProvider
  */
 class SettingsDataProvider extends DropshippingDataProvider

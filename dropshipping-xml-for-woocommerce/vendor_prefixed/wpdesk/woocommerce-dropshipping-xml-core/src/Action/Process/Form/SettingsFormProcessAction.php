@@ -10,6 +10,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Form\SettingsFo
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\DataProvider\SettingsDataProvider;
 /**
  * Class SettingsFormProcessAction, settings view form process.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Action\Process\Form
  */
 class SettingsFormProcessAction implements Conditional, Initable

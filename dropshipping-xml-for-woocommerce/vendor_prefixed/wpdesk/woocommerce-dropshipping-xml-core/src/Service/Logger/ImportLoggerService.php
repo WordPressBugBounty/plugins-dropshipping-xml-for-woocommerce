@@ -5,6 +5,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Service\L
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\File\FileObject;
 /**
  * Class ImportLoggerService.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Service\Logger
  */
 class ImportLoggerService
@@ -12,7 +13,7 @@ class ImportLoggerService
     /**
      * @var array
      */
-    private $messages = array();
+    private $messages = [];
     public function error($message)
     {
         $this->add_message('error', $message);

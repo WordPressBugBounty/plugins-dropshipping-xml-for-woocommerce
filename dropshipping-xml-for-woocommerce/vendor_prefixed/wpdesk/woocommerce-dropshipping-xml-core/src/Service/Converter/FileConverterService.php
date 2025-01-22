@@ -10,6 +10,7 @@ use RuntimeException;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Service\Validator\ConverterValidatorService;
 /**
  * Class FileConverterService
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Service\Converter
  */
 class FileConverterService
@@ -44,7 +45,7 @@ class FileConverterService
     {
         $this->convert_from_format = strtolower($format);
     }
-    public function convert(FileObject $source_file, array $parameters = array())
+    public function convert(FileObject $source_file, array $parameters = [])
     {
         $format = !empty($this->convert_from_format) ? $this->convert_from_format : $this->data_format->get_format_from_mime_type($source_file->getMimeType());
         $this->converter = $this->converter_factory->create_by_data_format($format);

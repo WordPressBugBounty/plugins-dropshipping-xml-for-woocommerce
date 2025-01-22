@@ -6,6 +6,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Container\ParameterContainer;
 /**
  * Class Request, shares data access methods to request.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Request
  */
 class Request
@@ -16,7 +17,7 @@ class Request
     private $parameter_container;
     public function __construct()
     {
-        $this->parameter_container = new ParameterContainer(array('METHOD' => strtoupper(isset($_SERVER['REQUEST_METHOD']) ? $_SERVER['REQUEST_METHOD'] : 'GET'), 'GET' => $_GET, 'POST' => $_POST, 'FILES' => $_FILES, 'COOKIE' => $_COOKIE, 'SERVER' => $_SERVER, 'SESSION' => isset($_SESSION) ? $_SESSION : array(), 'INPUT' => file_get_contents("php://input")));
+        $this->parameter_container = new ParameterContainer(['METHOD' => strtoupper(isset($_SERVER['REQUEST_METHOD']) ? $_SERVER['REQUEST_METHOD'] : 'GET'), 'GET' => $_GET, 'POST' => $_POST, 'FILES' => $_FILES, 'COOKIE' => $_COOKIE, 'SERVER' => $_SERVER, 'SESSION' => isset($_SESSION) ? $_SESSION : [], 'INPUT' => file_get_contents('php://input')]);
     }
     public function get_param(string $param): DataTypeInterface
     {

@@ -8,6 +8,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Service\Conditi
 use RuntimeException;
 /**
  * Class ConditionalLogicFactory, factory for conditional logic.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Factory
  */
 class ConditionalLogicServiceFactory
@@ -20,7 +21,7 @@ class ConditionalLogicServiceFactory
     {
         $this->resolver = $dependency_resolver;
     }
-    public function create_by_class_name(string $class_name, array $arguments = array()): ConditionalLogicServiceInterface
+    public function create_by_class_name(string $class_name, array $arguments = []): ConditionalLogicServiceInterface
     {
         $conditional_logic_services = $this->get_all();
         foreach ($conditional_logic_services as $service) {

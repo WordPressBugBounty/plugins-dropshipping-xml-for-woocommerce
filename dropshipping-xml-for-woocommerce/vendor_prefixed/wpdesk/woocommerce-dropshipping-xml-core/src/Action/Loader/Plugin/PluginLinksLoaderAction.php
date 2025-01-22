@@ -37,7 +37,7 @@ class PluginLinksLoaderAction implements Hookable
     }
     public function links_filter(array $links): array
     {
-        $plugin_links = array('<a style="color:#007050; font-weight:bold" href="' . $this->plugin_helper->generate_url_by_view(MarketingViewAction::class) . '">' . __('Start here', 'dropshipping-xml-for-woocommerce') . '</a>', '<a href="' . $this->plugin_helper->generate_url_by_view(ImportManagerViewAction::class) . '">' . __('Settings', 'dropshipping-xml-for-woocommerce') . '</a>', '<a href="' . __('https://www.wpdesk.net/docs/dropshipping-xml-woocommerce/', 'dropshipping-xml-for-woocommerce') . '">' . __('Docs', 'dropshipping-xml-for-woocommerce') . '</a>');
+        $plugin_links = ['<a style="color:#007050; font-weight:bold" href="' . $this->plugin_helper->generate_url_by_view(MarketingViewAction::class) . '">' . __('Start here', 'dropshipping-xml-for-woocommerce') . '</a>', '<a href="' . $this->plugin_helper->generate_url_by_view(ImportManagerViewAction::class) . '">' . __('Settings', 'dropshipping-xml-for-woocommerce') . '</a>', '<a href="' . __('https://www.wpdesk.net/docs/dropshipping-xml-woocommerce/', 'dropshipping-xml-for-woocommerce') . '">' . __('Docs', 'dropshipping-xml-for-woocommerce') . '</a>'];
         return array_merge($plugin_links, $links);
     }
 }

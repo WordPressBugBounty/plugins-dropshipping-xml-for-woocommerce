@@ -7,6 +7,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Menu\Abstraction\MainMenuInterface;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Menu\Abstraction\MenuInterface;
 use RuntimeException;
+use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Service\Locator\FileLocatorService;
 /**
  * Class PluginHelper, helps to navigate.
  *
@@ -88,9 +89,13 @@ class PluginHelper
     {
         return $this->config->get_param('menu.slug_prefix') . $view_id;
     }
-    public function get_url_to_plugin_file(string $uid): string
+    public function get_url_to_import_file(string $uid): string
     {
         return $this->config->get_param('files.tmp.dir_url') . $uid . '/' . $uid;
+    }
+    public function get_url_to_log_file(string $uid): string
+    {
+        return $this->config->get_param('files.tmp.dir_url') . $uid . '/' . $uid . '.' . FileLocatorService::LOG_FILE_EXTENSION;
     }
     private function check_if_view_exists(MenuInterface $menu, string $page_id, string $action): bool
     {

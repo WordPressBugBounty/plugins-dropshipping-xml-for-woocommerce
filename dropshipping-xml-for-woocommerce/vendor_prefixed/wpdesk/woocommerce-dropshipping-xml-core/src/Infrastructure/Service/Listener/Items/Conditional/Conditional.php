@@ -4,6 +4,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastru
 
 /**
  * Interface Conditional, check if service should run next listener for exmaple Initable, Registrable etc.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Service\Listener\Conditional
  */
 interface Conditional

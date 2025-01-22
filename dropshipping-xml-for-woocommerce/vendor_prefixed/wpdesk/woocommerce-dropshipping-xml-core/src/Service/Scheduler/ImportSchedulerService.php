@@ -9,6 +9,7 @@ use DateTime;
 use InvalidArgumentException;
 /**
  * Class ImportSchedulerService
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Service\Scheduler
  */
 class ImportSchedulerService
@@ -21,11 +22,11 @@ class ImportSchedulerService
     /**
      * @var array
      */
-    private $hours = array();
+    private $hours = [];
     /**
      * @var array
      */
-    private $weekdays = array();
+    private $weekdays = [];
     public function __construct(DataProviderFactory $data_provider_factory)
     {
         $this->data_provider_factory = $data_provider_factory;
@@ -44,7 +45,7 @@ class ImportSchedulerService
     public function estimate_time(string $uid): int
     {
         $result = $this->get_default_estimated_time();
-        $time_array = array();
+        $time_array = [];
         $weekdays = $this->get_weekdays($uid);
         $hours = $this->get_hours($uid);
         if (!empty($weekdays) && !empty($hours)) {
@@ -95,7 +96,7 @@ class ImportSchedulerService
             return $this->hours[$uid];
         }
         $options_data_provider = $this->data_provider_factory->create_by_class_name(ImportOptionsDataProvider::class, ['postfix' => $uid]);
-        $hours = $options_data_provider->has(ImportOptionsFormFields::CRON_HOURS) ? $options_data_provider->get(ImportOptionsFormFields::CRON_HOURS) : array();
+        $hours = $options_data_provider->has(ImportOptionsFormFields::CRON_HOURS) ? $options_data_provider->get(ImportOptionsFormFields::CRON_HOURS) : [];
         $this->hours[$uid] = $hours;
         return $hours;
     }
@@ -105,7 +106,7 @@ class ImportSchedulerService
             return $this->weekdays[$uid];
         }
         $options_data_provider = $this->data_provider_factory->create_by_class_name(ImportOptionsDataProvider::class, ['postfix' => $uid]);
-        $weekdays = $options_data_provider->has(ImportOptionsFormFields::CRON_WEEK_DAY) ? $options_data_provider->get(ImportOptionsFormFields::CRON_WEEK_DAY) : array();
+        $weekdays = $options_data_provider->has(ImportOptionsFormFields::CRON_WEEK_DAY) ? $options_data_provider->get(ImportOptionsFormFields::CRON_WEEK_DAY) : [];
         $this->weekdays[$uid] = $weekdays;
         return $weekdays;
     }

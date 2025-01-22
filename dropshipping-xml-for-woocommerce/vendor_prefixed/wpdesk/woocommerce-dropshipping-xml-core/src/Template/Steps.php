@@ -32,7 +32,7 @@ if ($mode === 'edit') {
 					<a href="<?php 
         echo \esc_url($previous_step);
         ?>" id="previous_step" class="button button-hero"
-					   name="button button-hero"><?php 
+						name="button button-hero"><?php 
         echo \esc_html(\__('&larr; Go to the previous step', 'dropshipping-xml-for-woocommerce'));
         ?></a>
 				<?php 

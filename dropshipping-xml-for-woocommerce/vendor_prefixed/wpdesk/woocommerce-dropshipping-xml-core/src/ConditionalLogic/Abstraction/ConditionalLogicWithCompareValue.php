@@ -4,14 +4,15 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Condition
 
 /**
  * intreface ConditionalLogic
+ *
  * @package WPDesk\Library\DropshippingXmlCore\ConditionalLogic
  */
 interface ConditionalLogicWithCompareValue extends ConditionalLogic
 {
     /**
-     * 
-     * @param string $value 
-     * @return bool 
+     *
+     * @param string $value
+     * @return bool
      */
     public function set_compare_value(string $value);
     public function get_value_field(): string;

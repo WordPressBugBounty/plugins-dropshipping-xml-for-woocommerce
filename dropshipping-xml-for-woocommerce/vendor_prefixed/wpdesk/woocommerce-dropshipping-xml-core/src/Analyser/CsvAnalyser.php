@@ -5,6 +5,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Analyser;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\File\FileObject;
 /**
  * Class CsvAnalyser, analyse csv file.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Analyser
  */
 class CsvAnalyser

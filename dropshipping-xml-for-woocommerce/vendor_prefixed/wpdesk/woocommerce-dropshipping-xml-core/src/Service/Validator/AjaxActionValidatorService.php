@@ -5,6 +5,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Service\V
 use RuntimeException;
 /**
  * Class AjaxActionValidatorService, validator for ajax action.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Service\Validator
  */
 class AjaxActionValidatorService

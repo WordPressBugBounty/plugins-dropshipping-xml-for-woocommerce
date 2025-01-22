@@ -5,6 +5,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Config;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Config\Abstraction\AbstractSingleConfig;
 /**
  * Class FilesConfig, configuration class for external files.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Config
  */
 class FilesConfig extends AbstractSingleConfig

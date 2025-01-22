@@ -5,6 +5,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Condition
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Form\Fields\Component\ConditionalLogicComponent;
 /**
  * class NotEmptyConditionalLogic
+ *
  * @package WPDesk\Library\DropshippingXmlCore\ConditionalLogic
  */
 class NotEmptyConditionalLogic extends EmptyConditionalLogic

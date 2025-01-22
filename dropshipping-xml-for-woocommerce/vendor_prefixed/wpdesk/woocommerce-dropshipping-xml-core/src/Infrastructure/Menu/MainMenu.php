@@ -4,6 +4,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastru
 
 /**
  * Class MainMenu, main menu class.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Menu
  */
 class MainMenu extends Abstraction\AbstractMenu implements Abstraction\MainMenuInterface
@@ -15,7 +16,7 @@ class MainMenu extends Abstraction\AbstractMenu implements Abstraction\MainMenuI
     /**
      * @var array
      */
-    private $submenus = array();
+    private $submenus = [];
     public function get_icon(): string
     {
         return $this->icon;

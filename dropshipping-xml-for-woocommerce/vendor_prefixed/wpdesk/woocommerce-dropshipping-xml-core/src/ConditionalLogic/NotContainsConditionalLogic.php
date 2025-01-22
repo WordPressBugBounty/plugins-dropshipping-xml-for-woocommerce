@@ -6,6 +6,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\ConditionalLogi
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Form\Fields\Component\ConditionalLogicComponent;
 /**
  * class NotContainsConditionalLogic
+ *
  * @package WPDesk\Library\DropshippingXmlCore\ConditionalLogic
  */
 class NotContainsConditionalLogic extends ContainsConditionalLogic

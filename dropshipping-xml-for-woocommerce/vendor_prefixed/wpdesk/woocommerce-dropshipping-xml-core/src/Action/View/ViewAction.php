@@ -8,6 +8,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\View\Abstraction\Displayable;
 /**
  * Class ViewAction, show view based on request.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Action\View
  */
 class ViewAction implements Displayable

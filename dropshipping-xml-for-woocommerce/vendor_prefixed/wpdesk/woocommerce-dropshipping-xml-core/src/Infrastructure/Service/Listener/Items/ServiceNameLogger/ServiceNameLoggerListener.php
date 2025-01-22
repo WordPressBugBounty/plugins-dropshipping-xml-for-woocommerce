@@ -6,6 +6,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Service\Container\Abstraction\ServiceContainerInterface;
 /**
  * Class ServiceNameLoggerListener, log servies class names.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Service\Listener\ServiceNameLogger
  */
 final class ServiceNameLoggerListener extends AbstractServiceListener

@@ -4,6 +4,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastru
 
 /**
  * Class SubMenu, sub menu class.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Menu
  */
 class SubMenu extends Abstraction\AbstractMenu implements Abstraction\SubMenuInterface

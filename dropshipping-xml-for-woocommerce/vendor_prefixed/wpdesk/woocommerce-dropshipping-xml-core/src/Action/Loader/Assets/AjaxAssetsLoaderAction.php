@@ -44,17 +44,17 @@ class AjaxAssetsLoaderAction implements Hookable, Conditional
     }
     public function hooks()
     {
-        add_action('admin_enqueue_scripts', array($this, 'enqueue_scripts'), 91);
+        add_action('admin_enqueue_scripts', [$this, 'enqueue_scripts'], 91);
     }
     public function enqueue_scripts()
     {
-        wp_localize_script('dropshipping_admin', FileImportAjaxAction::AJAX_ACTION, array('nonce' => wp_create_nonce(FileImportAjaxAction::AJAX_NONCE)));
-        wp_localize_script('dropshipping_admin', ConvertCsvImportAjaxAction::AJAX_ACTION, array('nonce' => wp_create_nonce(ConvertCsvImportAjaxAction::AJAX_NONCE)));
-        wp_localize_script('dropshipping_admin', ConvertXmlImportAjaxAction::AJAX_ACTION, array('nonce' => wp_create_nonce(ConvertXmlImportAjaxAction::AJAX_NONCE)));
-        wp_localize_script('dropshipping_admin', PreviewCsvImportAjaxAction::AJAX_ACTION, array('nonce' => wp_create_nonce(PreviewCsvImportAjaxAction::AJAX_NONCE)));
-        wp_localize_script('dropshipping_admin', PreviewXmlImportAjaxAction::AJAX_ACTION, array('nonce' => wp_create_nonce(PreviewXmlImportAjaxAction::AJAX_NONCE)));
-        wp_localize_script('dropshipping_admin', PreviewVariationsAjaxAction::AJAX_ACTION, array('nonce' => wp_create_nonce(PreviewVariationsAjaxAction::AJAX_NONCE)));
-        wp_localize_script('dropshipping_admin', ImportProcessAction::AJAX_ACTION, array('nonce' => wp_create_nonce(ImportProcessAction::AJAX_NONCE)));
-        wp_localize_script('dropshipping_admin', StopImportAjaxAction::AJAX_ACTION, array('nonce' => wp_create_nonce(StopImportAjaxAction::AJAX_NONCE)));
+        wp_localize_script('dropshipping_admin', FileImportAjaxAction::AJAX_ACTION, ['nonce' => wp_create_nonce(FileImportAjaxAction::AJAX_NONCE)]);
+        wp_localize_script('dropshipping_admin', ConvertCsvImportAjaxAction::AJAX_ACTION, ['nonce' => wp_create_nonce(ConvertCsvImportAjaxAction::AJAX_NONCE)]);
+        wp_localize_script('dropshipping_admin', ConvertXmlImportAjaxAction::AJAX_ACTION, ['nonce' => wp_create_nonce(ConvertXmlImportAjaxAction::AJAX_NONCE)]);
+        wp_localize_script('dropshipping_admin', PreviewCsvImportAjaxAction::AJAX_ACTION, ['nonce' => wp_create_nonce(PreviewCsvImportAjaxAction::AJAX_NONCE)]);
+        wp_localize_script('dropshipping_admin', PreviewXmlImportAjaxAction::AJAX_ACTION, ['nonce' => wp_create_nonce(PreviewXmlImportAjaxAction::AJAX_NONCE)]);
+        wp_localize_script('dropshipping_admin', PreviewVariationsAjaxAction::AJAX_ACTION, ['nonce' => wp_create_nonce(PreviewVariationsAjaxAction::AJAX_NONCE)]);
+        wp_localize_script('dropshipping_admin', ImportProcessAction::AJAX_ACTION, ['nonce' => wp_create_nonce(ImportProcessAction::AJAX_NONCE)]);
+        wp_localize_script('dropshipping_admin', StopImportAjaxAction::AJAX_ACTION, ['nonce' => wp_create_nonce(StopImportAjaxAction::AJAX_NONCE)]);
     }
 }

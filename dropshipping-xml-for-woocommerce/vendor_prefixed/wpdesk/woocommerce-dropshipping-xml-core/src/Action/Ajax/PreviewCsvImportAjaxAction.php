@@ -54,7 +54,7 @@ class PreviewCsvImportAjaxAction implements Conditional, Hookable
     }
     public function hooks()
     {
-        add_action('wp_ajax_' . self::AJAX_ACTION, array($this, 'ajax_import_data'));
+        add_action('wp_ajax_' . self::AJAX_ACTION, [$this, 'ajax_import_data']);
     }
     public function ajax_import_data()
     {

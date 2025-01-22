@@ -5,6 +5,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastru
 use RuntimeException;
 /**
  * Class Config, stores all configurations and shares data access methods.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Config
  */
 class ConfigException extends RuntimeException

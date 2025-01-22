@@ -13,6 +13,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Action\View\Imp
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Helper\PluginHelper;
 /**
  * Class ImportMapperFormProcessAction, import mapper view form process.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Action\Process\Form
  */
 class ImportMapperFormProcessAction implements Conditional, Initable

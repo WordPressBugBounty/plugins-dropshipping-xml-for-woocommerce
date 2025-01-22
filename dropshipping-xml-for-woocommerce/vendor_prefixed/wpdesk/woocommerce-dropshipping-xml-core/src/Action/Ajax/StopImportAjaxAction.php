@@ -40,7 +40,7 @@ class StopImportAjaxAction implements Conditional, Hookable
     }
     public function hooks()
     {
-        add_action('wp_ajax_' . self::AJAX_ACTION, array($this, 'ajax_process'));
+        add_action('wp_ajax_' . self::AJAX_ACTION, [$this, 'ajax_process']);
     }
     public function ajax_process()
     {

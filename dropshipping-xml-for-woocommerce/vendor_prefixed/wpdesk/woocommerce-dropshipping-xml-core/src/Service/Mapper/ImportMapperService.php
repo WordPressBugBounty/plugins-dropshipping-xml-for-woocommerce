@@ -158,7 +158,7 @@ class ImportMapperService implements ImportMapperServiceInterface
                     $value = $group[$key];
                 }
             }
-        } else if ($this->mapper_data_provider->has($key)) {
+        } elseif ($this->mapper_data_provider->has($key)) {
             $value = $this->mapper_data_provider->get($key);
         }
         return $value;
@@ -173,7 +173,7 @@ class ImportMapperService implements ImportMapperServiceInterface
                     $value = $group[$key];
                 }
             }
-        } else if ($this->options_data_provider->has($key)) {
+        } elseif ($this->options_data_provider->has($key)) {
             $value = $this->options_data_provider->get($key);
         }
         return $value;

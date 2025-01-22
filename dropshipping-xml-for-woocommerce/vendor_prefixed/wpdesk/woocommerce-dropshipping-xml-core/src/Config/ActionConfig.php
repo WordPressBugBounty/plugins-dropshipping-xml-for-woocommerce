@@ -27,6 +27,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Action\Loader\N
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Action\Loader\Assets\MenuPluginAssetsLoaderAction;
 /**
  * Class ActionConfig, configuration class for actions.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Config
  */
 class ActionConfig extends AbstractSingleConfig

@@ -223,32 +223,65 @@ class ProductAttributeMapperService implements ProductMapperServiceInterface
         }
         return (int) $attribute_id;
     }
-    protected function get_attributes(bool $for_variations = \true): array
+    protected function get_simple_attributes(): array
     {
-        $result = $temp_attr = [];
+        $result = [];
         $attributes = $this->get_attributes_from_field();
         $attributes = \is_array($attributes) ? $attributes : [];
         $count_items = is_array(reset($attributes)) ? count(reset($attributes)) : 1;
-        $is_taxonomy = $this->is_attribute_taxonomy();
         $attribute_name = $this->get_attribute_name();
         $attribute_value = $this->get_attribute_value();
         for ($i = 0; $i < $count_items; $i++) {
             if (isset($attributes[$attribute_name][$i]) && isset($attributes[$attribute_value][$i])) {
                 $name = $this->mapper->get_mapped_content($attributes[$attribute_name][$i]);
                 $value = $this->mapper->get_mapped_content($attributes[$attribute_value][$i]);
-                if (!empty($name) && !empty($value)) {
-                    $temp_attr[strtolower($name)]['name'] = $name;
-                    $temp_attr[strtolower($name)]['value'][] = $value;
+                if (!empty($name) && (is_string($value) && strlen($value) > 0)) {
+                    $result[strtolower($name)]['name'] = $name;
+                    $result[strtolower($name)]['value'][] = $value;
                 }
             }
         }
+        return $result;
+    }
+    protected function get_line_attributes(): array
+    {
+        $result = [];
+        $attributes_string = $this->get_line_attributes_from_field();
+        $attribute_separator = $this->get_line_attributes_separator_from_field();
+        $attribute_value_separator = $this->get_line_attributes_value_separator_from_field();
+        if (!is_string($attributes_string) || empty($attributes_string)) {
+            return $result;
+        }
+        $attributes = \explode($attribute_separator, $attributes_string);
+        foreach ($attributes as $attribute_chain) {
+            $attribute_chain = \trim($attribute_chain);
+            if (\strpos($attribute_chain, $attribute_value_separator) === \false) {
+                continue;
+            }
+            $parts = \explode($attribute_value_separator, $attribute_chain);
+            $name = \trim($parts[0]);
+            $value = \trim($parts[1]);
+            if (!empty($name) && (is_string($value) && strlen($value) > 0)) {
+                $result[strtolower($name)]['name'] = $name;
+                $result[strtolower($name)]['value'][] = $value;
+            }
+        }
+        return $result;
+    }
+    protected function get_attributes(bool $for_variations = \true): array
+    {
+        $result = $temp_attr = [];
+        $simple_attributes = $this->get_simple_attributes();
+        $line_attributes = $this->get_line_attributes();
+        $temp_attr = \array_merge_recursive($simple_attributes, $line_attributes);
+        $is_taxonomy = $this->is_attribute_taxonomy();
         $j = 1;
         foreach ($temp_attr as $value) {
             try {
                 $attribute = $this->create_attribute($value['name'], $value['value'], $j, $is_taxonomy, $for_variations);
                 if (\is_object($attribute)) {
                     $result[\sanitize_title($attribute->get_name())] = $attribute;
-                    $j++;
+                    ++$j;
                 }
             } catch (\Exception $e) {
                 $this->logger->error($e->getMessage());
@@ -267,6 +300,18 @@ class ProductAttributeMapperService implements ProductMapperServiceInterface
     protected function get_attributes_from_field(): array
     {
         return $this->mapper->get_raw_value(ImportMapperFormFields::PRODUCT_ATTRIBUTE);
+    }
+    protected function get_line_attributes_from_field(): string
+    {
+        return $this->mapper->map(ImportMapperFormFields::PRODUCT_ATTRIBUTE_LINE) ?? '';
+    }
+    protected function get_line_attributes_separator_from_field(): string
+    {
+        return $this->mapper->get_raw_value(ImportMapperFormFields::PRODUCT_ATTRIBUTE_LINE_SEPARATOR) ?? ',';
+    }
+    protected function get_line_attributes_value_separator_from_field(): string
+    {
+        return $this->mapper->get_raw_value(ImportMapperFormFields::PRODUCT_ATTRIBUTE_LINE_VALUE_SEPARATOR) ?? ':';
     }
     protected function is_attribute_taxonomy(): bool
     {

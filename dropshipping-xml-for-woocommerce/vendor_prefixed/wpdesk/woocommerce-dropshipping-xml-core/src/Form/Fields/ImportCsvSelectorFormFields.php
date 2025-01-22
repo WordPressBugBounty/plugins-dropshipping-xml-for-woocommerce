@@ -11,6 +11,7 @@ use DropshippingXmlFreeVendor\WPDesk\Forms\Field\ButtonField;
 use DropshippingXmlFreeVendor\WPDesk\Forms\FieldProvider;
 /**
  * Class ImportCsvSelectorFormFields, import csv selector form fields.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Form\Fields
  */
 class ImportCsvSelectorFormFields implements FieldProvider
@@ -32,11 +33,6 @@ class ImportCsvSelectorFormFields implements FieldProvider
      */
     public function get_fields()
     {
-        $beacon = $this->get_beacon_translations();
-        return [(new InputNumberField())->add_class('input-text regular-input padding-xs hs-beacon-search')->set_name(self::ITEM_NUMBER)->set_default_value(1)->set_attribute('data-beacon_search', $beacon['preview'])->set_attribute('id', self::ITEM_NUMBER_ID), (new InputTextField())->add_class('input-text regular-input hs-beacon-search')->set_name(self::INPUT_SEPARATOR)->set_attribute('maxlength', 1)->set_attribute('data-beacon_search', $beacon['preview'])->set_attribute('id', self::INPUT_SEPARATOR_ID), (new ButtonField())->set_name(self::BUTTON_SEPARATOR)->set_label(__('Apply', 'dropshipping-xml-for-woocommerce'))->add_class('button button-primary')->set_attribute('id', self::BUTTON_SEPARATOR_ID), (new HiddenField())->set_name(self::NODE_ELEMENT)->set_default_value(self::NODE_ELEMENT_VALUE)->set_attribute('id', self::NODE_ELEMENT_ID), (new SubmitField())->set_name(self::SUBMIT_NEXT_STEP)->set_label(__('Go to the next step &rarr;', 'dropshipping-xml-for-woocommerce'))->add_class('button button-primary button-hero')->set_attribute('id', self::SUBMIT_NEXT_STEP), (new NoOnceField(self::NONCE_ACTION))->set_name(self::NONCE_NAME)];
-    }
-    private function get_beacon_translations(): array
-    {
-        return ['preview' => __('Step 2/4 - File preview', 'dropshipping-xml-for-woocommerce')];
+        return [(new InputNumberField())->add_class('input-text regular-input padding-xs hs-beacon-search')->set_name(self::ITEM_NUMBER)->set_default_value(1)->set_attribute('id', self::ITEM_NUMBER_ID), (new InputTextField())->add_class('input-text regular-input hs-beacon-search')->set_name(self::INPUT_SEPARATOR)->set_attribute('maxlength', 1)->set_attribute('id', self::INPUT_SEPARATOR_ID), (new ButtonField())->set_name(self::BUTTON_SEPARATOR)->set_label(__('Apply', 'dropshipping-xml-for-woocommerce'))->add_class('button button-primary')->set_attribute('id', self::BUTTON_SEPARATOR_ID), (new HiddenField())->set_name(self::NODE_ELEMENT)->set_default_value(self::NODE_ELEMENT_VALUE)->set_attribute('id', self::NODE_ELEMENT_ID), (new SubmitField())->set_name(self::SUBMIT_NEXT_STEP)->set_label(esc_html__('Go to the next step &rarr;', 'dropshipping-xml-for-woocommerce'))->add_class('button button-primary button-hero')->set_attribute('id', self::SUBMIT_NEXT_STEP), (new NoOnceField(self::NONCE_ACTION))->set_name(self::NONCE_NAME)];
     }
 }

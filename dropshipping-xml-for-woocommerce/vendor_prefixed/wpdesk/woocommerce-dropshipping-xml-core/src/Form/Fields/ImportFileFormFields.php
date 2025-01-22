@@ -41,13 +41,13 @@ class ImportFileFormFields implements FieldProvider
      */
     public function get_fields()
     {
-        $input = (new InputUrlField())->set_placeholder(__('Add file url', 'dropshipping-xml-for-woocommerce'))->set_description(__('Complete the link to the CSV or XML file provided by your supplier and click the import button.', 'dropshipping-xml-for-woocommerce'))->add_class('input-text regular-input width-100 padding-sm hs-beacon-search')->set_attribute('data-beacon_search', __('Step 1/4 - File import', 'dropshipping-xml-for-woocommerce'))->set_name(self::FILE_URL);
-        $button = (new ButtonField())->set_name(self::IMPORT)->set_label(__('Import file', 'dropshipping-xml-for-woocommerce'))->add_class('button button-secondary button-hero to-right')->set_attribute('id', self::IMPORT);
+        $input = (new InputUrlField())->set_placeholder(esc_attr__('Add file url', 'dropshipping-xml-for-woocommerce'))->set_description(esc_html__('Complete the link to the CSV or XML file provided by your supplier and click the import button.', 'dropshipping-xml-for-woocommerce'))->add_class('input-text regular-input width-100 padding-sm hs-beacon-search')->set_attribute('data-beacon_search', __('Step 1/4 - File import', 'dropshipping-xml-for-woocommerce'))->set_name(self::FILE_URL);
+        $button = (new ButtonField())->set_name(self::IMPORT)->set_label(esc_html__('Import file', 'dropshipping-xml-for-woocommerce'))->add_class('button button-secondary button-hero to-right')->set_attribute('id', self::IMPORT);
         if ($this->file_limit_notification->is_file_limit_reached()) {
             $input->set_disabled();
             $button->set_disabled();
         }
-        return [$input, $button, (new SubmitField())->set_name(self::NEXT_STEP)->set_label(__('Go to the next step &rarr;', 'dropshipping-xml-for-woocommerce'))->add_class('button button-primary button-hero')->set_attribute('id', self::NEXT_STEP)->set_disabled(), (new HiddenField())->set_name(self::CLIENT)->set_default_value(self::CLIENT_CURL), (new HiddenField())->set_name(self::UID)->set_default_value($this->get_uid()), (new HiddenField())->set_name(self::ORIGINAL_FILE_FORMAT), (new HiddenField())->set_name(self::ORIGINAL_FILE_NAME), (new NoOnceField(self::NONCE_ACTION))->set_name(self::NONCE_NAME)];
+        return [$input, $button, (new SubmitField())->set_name(self::NEXT_STEP)->set_label(esc_html__('Go to the next step &rarr;', 'dropshipping-xml-for-woocommerce'))->add_class('button button-primary button-hero')->set_attribute('id', self::NEXT_STEP)->set_disabled(), (new HiddenField())->set_name(self::CLIENT)->set_default_value(self::CLIENT_CURL), (new HiddenField())->set_name(self::UID)->set_default_value($this->get_uid()), (new HiddenField())->set_name(self::ORIGINAL_FILE_FORMAT), (new HiddenField())->set_name(self::ORIGINAL_FILE_NAME), (new NoOnceField(self::NONCE_ACTION))->set_name(self::NONCE_NAME)];
     }
     private function get_uid(): string
     {

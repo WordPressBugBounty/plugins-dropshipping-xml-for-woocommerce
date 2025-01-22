@@ -8,14 +8,10 @@ use WC_Product;
  */
 class FlexibleEanIntegration
 {
-    const META_KEY = '_global_unique_id';
+    public const META_KEY = '_global_unique_id';
     public static function is_active(): bool
     {
-        return is_plugin_active('flexible-ean-for-woocommerce/flexible-ean-for-woocommerce.php');
-    }
-    public static function should_display_ean(): bool
-    {
-        return self::is_active() || defined('WC_VERSION') && version_compare(\WC_VERSION, '9.2.0', '>=');
+        return is_plugin_active('flexible-ean-for-woocommerce/flexible-ean-for-woocommerce.php') || defined('WC_VERSION') && version_compare(\WC_VERSION, '9.2.0', '>=');
     }
     public static function add_ean_field(WC_Product $product, string $ean): WC_Product
     {

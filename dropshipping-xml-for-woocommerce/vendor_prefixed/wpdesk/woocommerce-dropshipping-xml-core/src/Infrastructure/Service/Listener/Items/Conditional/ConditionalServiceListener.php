@@ -6,6 +6,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Service\Container\Abstraction\ServiceContainerInterface;
 /**
  * Class ConditionalServiceListener, checks is service implements Conditional interface and controll listeners propagation in the service.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Service\Listener\Conditional
  */
 final class ConditionalServiceListener extends AbstractServiceListener

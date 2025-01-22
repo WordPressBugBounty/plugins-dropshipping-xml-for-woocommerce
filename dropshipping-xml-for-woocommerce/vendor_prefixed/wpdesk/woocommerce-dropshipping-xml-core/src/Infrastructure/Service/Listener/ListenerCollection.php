@@ -8,6 +8,7 @@ use RuntimeException;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Service\Listener\Abstraction\ListenerCollectionInterface;
 /**
  * Class ListenerCollection
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Service\Listener
  */
 class ListenerCollection implements ListenerCollectionInterface

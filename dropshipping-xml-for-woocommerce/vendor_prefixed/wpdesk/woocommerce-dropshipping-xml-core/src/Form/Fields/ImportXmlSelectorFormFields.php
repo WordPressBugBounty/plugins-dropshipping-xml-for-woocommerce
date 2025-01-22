@@ -9,6 +9,7 @@ use DropshippingXmlFreeVendor\WPDesk\Forms\Field\SubmitField;
 use DropshippingXmlFreeVendor\WPDesk\Forms\FieldProvider;
 /**
  * Class ImportXmlSelectorFormFields, import xml selector form fields.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Form\Fields
  */
 class ImportXmlSelectorFormFields implements FieldProvider
@@ -25,11 +26,6 @@ class ImportXmlSelectorFormFields implements FieldProvider
      */
     public function get_fields()
     {
-        $beacon = $this->get_beacon_translations();
-        return [(new InputNumberField())->add_class('input-text regular-input padding-xs hs-beacon-search')->set_name(self::ITEM_NUMBER)->set_default_value(1)->set_attribute('data-beacon_search', $beacon['preview'])->set_attribute('id', self::ITEM_NUMBER_ID), (new HiddenField())->set_name(self::NODE_ELEMENT)->set_attribute('id', self::NODE_ELEMENT_ID), (new SubmitField())->set_name(self::SUBMIT_NEXT_STEP)->set_label(__('Go to the next step &rarr;', 'dropshipping-xml-for-woocommerce'))->add_class('button button-primary button-hero')->set_attribute('id', self::SUBMIT_NEXT_STEP), (new NoOnceField(self::NONCE_ACTION))->set_name(self::NONCE_NAME)];
-    }
-    private function get_beacon_translations(): array
-    {
-        return ['preview' => __('Step 2/4 - File preview', 'dropshipping-xml-for-woocommerce')];
+        return [(new InputNumberField())->add_class('input-text regular-input padding-xs')->set_name(self::ITEM_NUMBER)->set_default_value(1)->set_attribute('id', self::ITEM_NUMBER_ID), (new HiddenField())->set_name(self::NODE_ELEMENT)->set_attribute('id', self::NODE_ELEMENT_ID), (new SubmitField())->set_name(self::SUBMIT_NEXT_STEP)->set_label(esc_html__('Go to the next step &rarr;', 'dropshipping-xml-for-woocommerce'))->add_class('button button-primary button-hero')->set_attribute('id', self::SUBMIT_NEXT_STEP), (new NoOnceField(self::NONCE_ACTION))->set_name(self::NONCE_NAME)];
     }
 }

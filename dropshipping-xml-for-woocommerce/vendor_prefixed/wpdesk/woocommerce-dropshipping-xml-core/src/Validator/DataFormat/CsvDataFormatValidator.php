@@ -8,6 +8,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Validator\DataF
 use RuntimeException;
 /**
  * Class CsvDataFormatValidator, csv data format validator.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Validator\DataFormat
  */
 class CsvDataFormatValidator implements DataFormatValidator

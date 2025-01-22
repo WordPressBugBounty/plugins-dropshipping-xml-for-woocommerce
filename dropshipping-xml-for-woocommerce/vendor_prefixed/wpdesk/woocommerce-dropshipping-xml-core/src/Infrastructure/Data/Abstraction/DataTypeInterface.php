@@ -4,6 +4,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastru
 
 /**
  * Interface DataTypeInterface, abstraction layer for data type access.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Data
  */
 interface DataTypeInterface

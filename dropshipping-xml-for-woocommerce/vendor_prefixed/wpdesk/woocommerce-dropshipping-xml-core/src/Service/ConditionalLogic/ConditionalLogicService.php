@@ -12,18 +12,19 @@ use RuntimeException;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Service\ConditionalLogic\Abstraction\ConditionalLogicServiceInterface;
 /**
  * Class ConditionalLogicService
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Service\Mapper
  */
 class ConditionalLogicService implements ConditionalLogicServiceInterface
 {
     const VALUES_SEPARATOR = '|';
     /**
-     * 
+     *
      * @var ImportMapperService
      */
     private $mapper;
     /**
-     * 
+     *
      * @var ConditionalLogicFactory
      */
     private $conditional_logic_factory;

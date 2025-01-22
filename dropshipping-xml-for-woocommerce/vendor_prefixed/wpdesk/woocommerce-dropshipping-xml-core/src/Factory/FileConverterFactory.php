@@ -9,6 +9,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Converter\File\
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Converter\File\FileConverterInterface;
 /**
  * Class FileConverterFactory, file converter factory.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Factory
  */
 class FileConverterFactory
@@ -21,7 +22,7 @@ class FileConverterFactory
     {
         $this->resolver = $dependency_resolver;
     }
-    public function create_by_data_format(string $format, array $parameters = array()): FileConverterInterface
+    public function create_by_data_format(string $format, array $parameters = []): FileConverterInterface
     {
         $data_converters = $this->get_all_product_data_converters();
         foreach ($data_converters as $data_converter) {

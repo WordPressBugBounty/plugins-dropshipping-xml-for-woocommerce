@@ -5,6 +5,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastru
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Service\Container\Abstraction\ServiceContainerInterface;
 /**
  * Class AbstractServiceListener, abstraction layer for service listener.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Service\Listener
  */
 abstract class AbstractServiceListener

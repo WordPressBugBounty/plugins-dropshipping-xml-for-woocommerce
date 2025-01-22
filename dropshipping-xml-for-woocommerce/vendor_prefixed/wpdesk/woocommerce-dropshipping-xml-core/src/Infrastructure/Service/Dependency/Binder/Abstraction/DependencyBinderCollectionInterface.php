@@ -4,6 +4,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastru
 
 /**
  * Interface DependencyBinderCollectionInterface abstraction for storing associated binded classnames/interfaces in a collection.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Container
  */
 interface DependencyBinderCollectionInterface
@@ -40,6 +41,7 @@ interface DependencyBinderCollectionInterface
     public function get(string $class_name, string $parameter);
     /**
      * Get all binded array.
+     *
      * @return array
      */
     public function get_all(): array;

@@ -5,6 +5,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastru
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Data\Abstraction\DataTypeInterface;
 /**
  * Class DataType data type access class.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Data
  */
 class DataType implements DataTypeInterface

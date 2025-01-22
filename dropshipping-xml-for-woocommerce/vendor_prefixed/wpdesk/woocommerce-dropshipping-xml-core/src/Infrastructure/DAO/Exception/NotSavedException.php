@@ -5,6 +5,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastru
 use RuntimeException;
 /**
  * Class NotSavedException, exception if entity is not saved.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\DAO\Exception
  */
 class NotSavedException extends RuntimeException

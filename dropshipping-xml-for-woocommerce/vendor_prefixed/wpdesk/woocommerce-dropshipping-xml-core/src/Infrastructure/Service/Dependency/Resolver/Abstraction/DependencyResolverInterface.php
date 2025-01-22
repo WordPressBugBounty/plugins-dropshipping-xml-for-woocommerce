@@ -4,6 +4,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastru
 
 /**
  * Interface DependencyResolverInterface, abstraction layer for dependency resolver implementation.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Service
  */
 interface DependencyResolverInterface
@@ -14,5 +15,5 @@ interface DependencyResolverInterface
      *
      * @return object
      */
-    public function resolve(string $class_name, array $arguments = array());
+    public function resolve(string $class_name, array $arguments = []);
 }

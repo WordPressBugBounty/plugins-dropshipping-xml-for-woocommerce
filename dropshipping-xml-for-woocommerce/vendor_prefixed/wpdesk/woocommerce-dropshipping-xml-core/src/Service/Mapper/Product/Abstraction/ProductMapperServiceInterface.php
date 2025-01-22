@@ -5,6 +5,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Service\M
 use WC_Product;
 /**
  * Interface ProductMapperServiceInterface, add interface to map wc_product;
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Service\Mapper\Product\Abstraction
  */
 interface ProductMapperServiceInterface

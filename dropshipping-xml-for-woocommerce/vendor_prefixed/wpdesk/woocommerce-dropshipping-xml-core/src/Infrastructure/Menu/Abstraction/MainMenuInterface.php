@@ -4,6 +4,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastru
 
 /**
  * Interface MainMenuInterface, abstraction layer for main menu.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Menu
  */
 interface MainMenuInterface extends MenuInterface

@@ -8,6 +8,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Exception\Conne
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Connector\Abstraction\Connector;
 /**
  * Class CurlHttpClient, curl http client.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Connector\Client
  */
 class CurlHttpClient implements Connector

@@ -9,6 +9,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Service\Container\Abstraction\ServiceContainerInterface;
 /**
  * Class ServiceContainer manage services. It use DependencyResolver to gets instances from class names.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Container
  */
 class ServiceContainer implements ServiceContainerInterface
@@ -16,12 +17,13 @@ class ServiceContainer implements ServiceContainerInterface
     /**
      * @var array
      */
-    private $services = array();
+    private $services = [];
     /**
      * Forbidden services class names.
+     *
      * @var array
      */
-    private $forbidden = array();
+    private $forbidden = [];
     /**
      * @var DependencyResolverInterface
      */
@@ -177,7 +179,6 @@ class ServiceContainer implements ServiceContainerInterface
      * Notify listeners about registered service.
      *
      * @param object $service
-     *
      */
     private function notify_listeners($service)
     {

@@ -14,6 +14,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Form\Fields\Imp
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\DAO\ImportDAO;
 /**
  * Class ImportXmlSelectorFormProcessAction, import xml selector view form process.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Action\Process\Form
  */
 class ImportXmlSelectorFormProcessAction implements Conditional, Initable

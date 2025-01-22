@@ -20,6 +20,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Service\Scheduler\ImportSchedulerService;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Service\Importer\ProductImporterService;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Service\Cleaner\ProductCleanerService;
+use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Service\Logger\ImportLoggerSaverService;
 use InvalidArgumentException;
 use Exception;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Analyser\CsvAnalyser;
@@ -81,11 +82,12 @@ class ImportProcessAction implements Hookable
      * @var FileConverterService
      */
     private $converter_service;
+    private ImportLoggerSaverService $logger_saver;
     /**
      * @var bool
      */
     private $finished = \false;
-    public function __construct(Request $request, ImportDAO $import_dao, DataProviderFactory $data_provider_factory, ProductImporterService $import_service, ProductCleanerService $cleaner_service, ImportSchedulerService $scheduler, FileLocatorService $file_locator, FileConnectorService $file_connector, FileConverterService $converter_service, ImportLoggerService $logger, XmlAnalyser $xml_analyser, CsvAnalyser $csv_analyser)
+    public function __construct(Request $request, ImportDAO $import_dao, DataProviderFactory $data_provider_factory, ProductImporterService $import_service, ProductCleanerService $cleaner_service, ImportSchedulerService $scheduler, FileLocatorService $file_locator, FileConnectorService $file_connector, FileConverterService $converter_service, ImportLoggerService $logger, XmlAnalyser $xml_analyser, CsvAnalyser $csv_analyser, ImportLoggerSaverService $logger_saver)
     {
         $this->import_dao = $import_dao;
         $this->import_service = $import_service;
@@ -99,6 +101,7 @@ class ImportProcessAction implements Hookable
         $this->file_connector = $file_connector;
         $this->converter_service = $converter_service;
         $this->data_provider_factory = $data_provider_factory;
+        $this->logger_saver = $logger_saver;
     }
     public function hooks()
     {
@@ -160,6 +163,7 @@ class ImportProcessAction implements Hookable
                     break;
             }
             $this->lock_import(\false);
+            $this->logger_saver->save($this->logger, $this->file_locator->get_log_file($file_import->get_uid()));
         } else {
             $this->logger->notice(__('Waiting, another process is importing now.', 'dropshipping-xml-for-woocommerce'));
             sleep(3);
@@ -246,6 +250,7 @@ class ImportProcessAction implements Hookable
     private function process_next_import(Import $file_import)
     {
         if (\true === $this->lock_import()) {
+            $this->logger_saver->clean($this->file_locator->get_log_file($file_import->get_uid()));
             $this->logger->notice(__('Starting new import for uid: ' . $file_import->get_uid(), 'dropshipping-xml-for-woocommerce'));
             $file_import->set_status(Import::STATUS_DOWNLOADING);
             $file_import->set_start_date(time());

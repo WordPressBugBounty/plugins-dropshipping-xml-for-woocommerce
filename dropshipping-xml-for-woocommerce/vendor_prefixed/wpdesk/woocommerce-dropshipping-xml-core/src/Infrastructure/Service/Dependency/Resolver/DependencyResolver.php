@@ -11,6 +11,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Service\Dependency\Resolver\Abstraction\DependencyResolverInterface;
 /**
  * Class DependencyResolver, resolves instances from class names and register required dependencies to service container (if set).
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Container
  */
 class DependencyResolver implements DependencyResolverInterface, ServiceContainerAwareInterface
@@ -45,7 +46,7 @@ class DependencyResolver implements DependencyResolverInterface, ServiceContaine
     /**
      * @see DependencyResolverInterface::resolve()
      */
-    public function resolve(string $class_name, array $arguments = array())
+    public function resolve(string $class_name, array $arguments = [])
     {
         if ($this->binder->has($class_name)) {
             $bound = $this->binder->get($class_name);
@@ -58,7 +59,7 @@ class DependencyResolver implements DependencyResolverInterface, ServiceContaine
         }
         return $dependency;
     }
-    public function create_reflected_object(string $class_name, array $arguments = array())
+    public function create_reflected_object(string $class_name, array $arguments = [])
     {
         if (\interface_exists($class_name)) {
             throw new \InvalidArgumentException('Interface ' . $class_name . ' can\'t be resolved.');
@@ -154,7 +155,7 @@ class DependencyResolver implements DependencyResolverInterface, ServiceContaine
      */
     private function get_constructor_params(ReflectionClass $reflection_class, array $arguments)
     {
-        $result = array();
+        $result = [];
         $constructor = $reflection_class->getConstructor();
         if (null !== $constructor) {
             foreach ($constructor->getParameters() as $param) {

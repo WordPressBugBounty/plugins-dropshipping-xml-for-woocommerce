@@ -6,6 +6,7 @@ use DropshippingXmlFreeVendor\WPDesk\Forms\Form\FormWithFields;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Form\Abstraction\FormIdentity;
 /**
  * Class ImportManagerForm, import manager form.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Form
  */
 class ImportManagerForm extends FormWithFields implements FormIdentity

@@ -6,6 +6,7 @@ use DropshippingXmlFreeVendor\WPDesk\Forms\Form\FormWithFields;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Form\Abstraction\FormIdentity;
 /**
  * Class ImportMapperForm, import mapper form.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Form
  */
 class ImportMapperForm extends FormWithFields implements FormIdentity

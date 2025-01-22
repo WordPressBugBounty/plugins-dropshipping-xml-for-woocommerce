@@ -15,6 +15,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Action\View\Imp
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Action\View\ImportStatusViewAction;
 /**
  * Class ImportOptionsFormProcessAction, import options form process.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Action\Process\Form
  */
 class ImportOptionsFormProcessAction implements Conditional, Initable

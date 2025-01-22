@@ -10,6 +10,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Connector\Abstraction\Connector;
 /**
  * Class ConnectorClientFactory, connector client factory.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Factory
  */
 class ConnectorClientFactory

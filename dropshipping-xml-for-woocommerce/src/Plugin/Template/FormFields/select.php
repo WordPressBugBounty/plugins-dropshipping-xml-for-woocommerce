@@ -73,7 +73,7 @@ $add_array = ( isset( $multiple ) && true === $multiple || $field->is_multiple()
 		?>
 		<option
 			<?php
-			if ( $possible_value === $value || ( is_array( $value ) && in_array( $possible_value, $value ) ) || \is_numeric( $possible_value ) && \is_numeric( $value ) && (int) $possible_value === (int) $value ) {
+			if ( $possible_value === $value || ( is_array( $value ) && in_array( $possible_value, $value, false ) ) || \is_numeric( $possible_value ) && \is_numeric( $value ) && (int) $possible_value === (int) $value ) { // @phpstan-ignore-line
 				?>
 		selected="selected"
 				<?php

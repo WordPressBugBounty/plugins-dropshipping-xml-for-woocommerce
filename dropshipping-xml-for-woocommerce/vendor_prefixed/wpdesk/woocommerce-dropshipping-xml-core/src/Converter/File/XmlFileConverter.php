@@ -7,6 +7,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\File\FileObject
 use DOMDocument;
 /**
  * Class XmlFileConverter, xml file converter.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Converter\File
  */
 class XmlFileConverter implements FileConverterInterface

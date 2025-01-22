@@ -7,6 +7,7 @@ use DropshippingXmlFreeVendor\WPDesk\Forms\ContainerForm;
 use DropshippingXmlFreeVendor\WPDesk\Persistence\AllDataAccessContainer;
 /**
  * Class DataProvider, abstraction layer for data provider class. Allows to store and access data.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Provider
  */
 abstract class DataProvider implements ContainerInterface

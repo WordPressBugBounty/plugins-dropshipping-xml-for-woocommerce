@@ -8,6 +8,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Config\Abstraction\AbstractSingleConfig;
 /**
  * Class Config, stores all merged data from single configurations and shares data access methods.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Config
  */
 final class Config implements ConfigInterface
@@ -18,7 +19,7 @@ final class Config implements ConfigInterface
     private $parameter_container;
     public function __construct()
     {
-        $this->parameter_container = new ParameterContainer(array());
+        $this->parameter_container = new ParameterContainer([]);
     }
     public function get_param(string $key): DataTypeInterface
     {

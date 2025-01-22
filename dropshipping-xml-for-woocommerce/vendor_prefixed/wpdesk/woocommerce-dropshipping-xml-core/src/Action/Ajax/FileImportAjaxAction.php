@@ -54,7 +54,7 @@ class FileImportAjaxAction implements Conditional, Hookable
     }
     public function hooks()
     {
-        add_action('wp_ajax_' . self::AJAX_ACTION, array($this, 'ajax_download_data'));
+        add_action('wp_ajax_' . self::AJAX_ACTION, [$this, 'ajax_download_data']);
     }
     public function ajax_download_data()
     {

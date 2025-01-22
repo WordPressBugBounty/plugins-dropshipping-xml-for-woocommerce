@@ -200,9 +200,16 @@ if (empty($imports)) {
 								</span>
 								<span class="edit">
 									<a href="<?php 
-        echo \esc_url($plugin_helper->get_url_to_plugin_file($import_file->get_uid()));
+        echo \esc_url($plugin_helper->get_url_to_import_file($import_file->get_uid()));
         ?>"><?php 
         echo \esc_html(\__('Imported file preview', 'dropshipping-xml-for-woocommerce'));
+        ?></a> |
+								</span>
+								<span class="edit">
+									<a href="<?php 
+        echo \esc_url($plugin_helper->get_url_to_log_file($import_file->get_uid()));
+        ?>"><?php 
+        echo \esc_html(\__('Log', 'dropshipping-xml-for-woocommerce'));
         ?></a> |
 								</span>
 								<span class="edit">

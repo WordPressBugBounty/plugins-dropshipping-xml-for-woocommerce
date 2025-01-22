@@ -18,7 +18,7 @@ function dropshipping_price_groups_generate($group_id, $pricing, $conditions)
 			<div class="price-mod-group-name flex-row group-switcher">
 				<div class="flex-col justify-left">
 					<span class="group-title"><?php 
-    echo \sprintf(\__('Group <span class="group-counter">%s</span>', 'dropshipping-xml-for-woocommerce'), $group_id);
+    \printf(\__('Group <span class="group-counter">%s</span>', 'dropshipping-xml-for-woocommerce'), $group_id);
     ?></span>
 					<span class="group-arrow dashicons dashicons-arrow-down"></span>
 				</div>
@@ -103,7 +103,7 @@ function dropshipping_price_logic_generate($value, $group_id, $name_prefix, $fie
             // phpcs:ignore
             foreach ($items as $item) {
                 $val = isset($value[$item->get_name()][$i]) ? \strval($value[$item->get_name()][$i]) : '';
-                //$item->set_attribute( 'id', $name_prefix . '_' . $field->get_id() . '_' . $item->get_id() . '_' . $group_id . '_' . $i );
+                // $item->set_attribute( 'id', $name_prefix . '_' . $field->get_id() . '_' . $item->get_id() . '_' . $group_id . '_' . $i );
                 $template_name = $item->get_template_name() === 'input-text' ? 'input' : $item->get_template_name();
                 if (\in_array($item->get_name(), $single_value_columns)) {
                     // phpcs:ignore
@@ -149,7 +149,7 @@ function dropshipping_price_logic_generate($value, $group_id, $name_prefix, $fie
 <div id="price-mod-groups-container">
 	<div id="price-mod-groups">
 	<?php 
-$value = \is_array($value) ? $value : array();
+$value = \is_array($value) ? $value : [];
 foreach ($value as $key => $val) {
     \ob_start();
     dropshipping_price_modificator_generate($val, $key, $name_prefix, $field, $renderer);
@@ -180,7 +180,7 @@ foreach ($value as $key => $val) {
 	<div>
 <?php 
 $i = 0;
-$val = array();
+$val = [];
 \ob_start();
 dropshipping_price_modificator_generate($val, $i, $name_prefix, $field, $renderer);
 $pricing = \ob_get_contents();
@@ -197,7 +197,7 @@ dropshipping_price_groups_generate($i, $pricing, $conditions);
 <script id="condition-template" type="text/x-custom-template">
 <?php 
 $i = 0;
-$val = array();
+$val = [];
 \ob_start();
 dropshipping_price_logic_generate($val, $i, $name_prefix, $field, $renderer);
 $conditions = \ob_get_contents();

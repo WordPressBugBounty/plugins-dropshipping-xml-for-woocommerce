@@ -6,6 +6,7 @@ use DropshippingXmlFreeVendor\WPDesk\Forms\Field\InputTextField;
 use DropshippingXmlFreeVendor\WPDesk\Forms\FieldProvider;
 /**
  * Class ImportSidebarFormFields, import file form fields.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Form\Fields
  */
 class ImportSidebarFormFields implements FieldProvider

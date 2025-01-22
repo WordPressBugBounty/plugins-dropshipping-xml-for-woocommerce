@@ -5,6 +5,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastru
 use RuntimeException;
 /**
  * Class NotFoundException, exception if entity is not found.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\DAO\Exception
  */
 class NotFoundException extends RuntimeException

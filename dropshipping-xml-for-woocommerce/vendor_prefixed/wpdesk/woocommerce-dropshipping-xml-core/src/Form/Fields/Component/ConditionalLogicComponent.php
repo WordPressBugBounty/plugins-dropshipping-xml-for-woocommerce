@@ -6,6 +6,7 @@ use DropshippingXmlFreeVendor\WPDesk\Forms\Field\SelectField;
 use DropshippingXmlFreeVendor\WPDesk\Forms\Field\InputTextField;
 /**
  * Class ConditionalLogicComponent, conditional logic form fields component.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Form\Fields\Component
  */
 class ConditionalLogicComponent extends \DropshippingXmlFreeVendor\WPDesk\Forms\Field\BasicField
@@ -32,7 +33,7 @@ class ConditionalLogicComponent extends \DropshippingXmlFreeVendor\WPDesk\Forms\
     const FIELD_CONTAINS_VALUE = 'contains';
     const FIELD_NOT_CONTAINS_VALUE = 'not_contains';
     /**
-     * 
+     *
      * @var array
      */
     private $items;

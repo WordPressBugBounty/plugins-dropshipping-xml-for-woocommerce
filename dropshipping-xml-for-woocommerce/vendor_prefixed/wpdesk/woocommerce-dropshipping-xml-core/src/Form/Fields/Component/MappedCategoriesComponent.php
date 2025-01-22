@@ -4,6 +4,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Form\Fiel
 
 /**
  * Class MappedCategoriesComponent, mapped categories form field component.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Form\Fields\Component
  */
 class MappedCategoriesComponent extends \DropshippingXmlFreeVendor\WPDesk\Forms\Field\BasicField
@@ -20,7 +21,7 @@ class MappedCategoriesComponent extends \DropshippingXmlFreeVendor\WPDesk\Forms\
     }
     public function get_items(): array
     {
-        return isset($this->meta['items']) && is_array($this->meta['items']) ? $this->meta['items'] : array();
+        return isset($this->meta['items']) && is_array($this->meta['items']) ? $this->meta['items'] : [];
     }
     public function get_template_name(): string
     {

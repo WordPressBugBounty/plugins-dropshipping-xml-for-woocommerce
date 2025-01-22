@@ -5,7 +5,7 @@ Tags: import products, dropshipping, woocommerce import products, woocommerce dr
 Requires at least: 5.2
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.6.6
+Stable tag: 1.6.7
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -352,6 +352,14 @@ Yes. Check out our [**free WooCommerce plugins &rarr;**](https://profiles.wordpr
 30. Use a step-by-step guide to import and bulk update products in WooCommerce
 
 == Changelog ==
+
+= 1.6.7 - 2025-01-22 =
+* Added product tags mapper
+* Added integration with GPSR for WooCommerce
+* Added log view
+* Added single line attributes support
+* Added custom id feature
+* Fix CSV import converter
 
 = 1.6.6 - 2024-12-04 =
 * Fix variation cleaner

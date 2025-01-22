@@ -6,6 +6,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Form\ImportMana
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Provider\Abstraction\DataProvider;
 /**
  * Class ImportManagerDataProvider, import manager data provider.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\DataProvider
  */
 class ImportManagerDataProvider extends DropshippingDataProvider

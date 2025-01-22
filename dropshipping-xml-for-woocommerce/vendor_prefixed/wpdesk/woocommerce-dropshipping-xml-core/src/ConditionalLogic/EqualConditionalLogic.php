@@ -8,17 +8,18 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Form\Fields\Com
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Exception\ConditionalLogicNoValueException;
 /**
  * class EmptyConditionalLogic
+ *
  * @package WPDesk\Library\DropshippingXmlCore\ConditionalLogic
  */
 class EqualConditionalLogic implements ConditionalLogicWithCompareValue
 {
     /**
-     * 
+     *
      * @var string
      */
     private $xpath_value;
     /**
-     * 
+     *
      * @var string
      */
     private $compare_value;

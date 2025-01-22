@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit2c46dcc445f36aff78629b8da252ca7f
+class ComposerStaticInit4e1749e565990eb04c191b6bc2498cad
 {
     public static $prefixLengthsPsr4 = array (
         'W' => 
@@ -386,6 +386,7 @@ class ComposerStaticInit2c46dcc445f36aff78629b8da252ca7f
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\File\\FileObject' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/File/FileObject.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Form\\Fields\\Component\\AttributesComponent' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Form/Fields/Component/AttributesComponent.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Form\\Fields\\Component\\ConditionalLogicComponent' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Form/Fields/Component/ConditionalLogicComponent.php',
+        'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Form\\Fields\\Component\\GPSRComponent' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Form/Fields/Component/GPSRComponent.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Form\\Fields\\Component\\MappedCategoriesComponent' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Form/Fields/Component/MappedCategoriesComponent.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Form\\Fields\\Component\\MappedTaxClassComponent' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Form/Fields/Component/MappedTaxClassComponent.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Form\\Fields\\Component\\PriceModificatorComponent' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Form/Fields/Component/PriceModificatorComponent.php',
@@ -453,6 +454,7 @@ class ComposerStaticInit2c46dcc445f36aff78629b8da252ca7f
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Infrastructure\\View\\Abstraction\\Renderable' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Infrastructure/View/Abstraction/Renderable.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Infrastructure\\View\\FormView' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Infrastructure/View/FormView.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Integration\\FlexibleEanIntegration' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Integration/FlexibleEanIntegration.php',
+        'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Integration\\GPSRIntegration' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Integration/GPSRIntegration.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Modificator\\PriceModificator' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Modificator/PriceModificator.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Modificator\\PriceModificatorConditionalLogic' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Modificator/PriceModificatorConditionalLogic.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Modificator\\PriceModificatorGroup' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Modificator/PriceModificatorGroup.php',
@@ -467,6 +469,7 @@ class ComposerStaticInit2c46dcc445f36aff78629b8da252ca7f
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Service\\Creator\\ProductCreatorService' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Service/Creator/ProductCreatorService.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Service\\Importer\\ProductImporterService' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Service/Importer/ProductImporterService.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Service\\Locator\\FileLocatorService' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Service/Locator/FileLocatorService.php',
+        'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Service\\Logger\\ImportLoggerSaverService' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Service/Logger/ImportLoggerSaverService.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Service\\Logger\\ImportLoggerService' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Service/Logger/ImportLoggerService.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Service\\Mapper\\Abstraction\\ImportMapperServiceInterface' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Service/Mapper/Abstraction/ImportMapperServiceInterface.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Service\\Mapper\\ImportMapperService' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Service/Mapper/ImportMapperService.php',
@@ -478,6 +481,7 @@ class ComposerStaticInit2c46dcc445f36aff78629b8da252ca7f
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Service\\Mapper\\Product\\ProductEmbeddedMapperService' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Service/Mapper/Product/ProductEmbeddedMapperService.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Service\\Mapper\\Product\\ProductImageMapperService' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Service/Mapper/Product/ProductImageMapperService.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Service\\Mapper\\Product\\ProductMapperService' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Service/Mapper/Product/ProductMapperService.php',
+        'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Service\\Mapper\\Product\\ProductTagMapperService' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Service/Mapper/Product/ProductTagMapperService.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Service\\Resolver\\FileFormatResolverService' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Service/Resolver/FileFormatResolverService.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Service\\Scheduler\\ImportSchedulerService' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Service/Scheduler/ImportSchedulerService.php',
         'DropshippingXmlFreeVendor\\WPDesk\\Library\\DropshippingXmlCore\\Service\\Validator\\AjaxActionValidatorService' => __DIR__ . '/../..' . '/vendor_prefixed/wpdesk/woocommerce-dropshipping-xml-core/src/Service/Validator/AjaxActionValidatorService.php',
@@ -660,9 +664,9 @@ class ComposerStaticInit2c46dcc445f36aff78629b8da252ca7f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit2c46dcc445f36aff78629b8da252ca7f::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit2c46dcc445f36aff78629b8da252ca7f::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit2c46dcc445f36aff78629b8da252ca7f::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit4e1749e565990eb04c191b6bc2498cad::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit4e1749e565990eb04c191b6bc2498cad::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit4e1749e565990eb04c191b6bc2498cad::$classMap;
 
         }, null, ClassLoader::class);
     }

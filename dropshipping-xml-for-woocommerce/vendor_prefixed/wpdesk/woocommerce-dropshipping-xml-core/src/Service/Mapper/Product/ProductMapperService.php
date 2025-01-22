@@ -10,9 +10,12 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Service\Mapper\
 use WC_Product_Variation;
 use WC_Product;
 use WC_Product_External;
+use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\DAO\ProductDAO;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Service\ConditionalLogic\PriceModificatorService;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Form\Fields\ImportOptionsFormFields;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Integration\FlexibleEanIntegration;
+use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Integration\GPSRIntegration;
+use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Form\Fields\Component\GPSRComponent;
 /**
  * Class ProductMapperService, basic product information mapper.
  *
@@ -71,6 +74,8 @@ class ProductMapperService implements ProductMapperServiceInterface
         $wc_product = $this->update_shipping($wc_product);
         $wc_product = $this->update_sku($wc_product);
         $wc_product = $this->update_ean($wc_product);
+        $wc_product = $this->update_unique_custom_product_id($wc_product);
+        $wc_product = $this->update_gpsr($wc_product);
         if ('external' === $wc_product->get_type()) {
             $this->update_external_data($wc_product);
         }
@@ -92,27 +97,33 @@ class ProductMapperService implements ProductMapperServiceInterface
     private function update_title(WC_Product $wc_product): WC_Product
     {
         if ($this->mapper->is_product_field_group_should_be_mapped($wc_product, ImportOptionsFormFields::SYNC_FIELD_OPTION_TITLE)) {
+            $val = '';
             if ($this->mapper->has_value_to_map(ImportMapperFormFields::TITLE)) {
-                $wc_product->set_name(wc_clean(apply_filters(self::FILTER_NAME_SHORT_TITLE, $this->mapper->map(ImportMapperFormFields::TITLE))));
+                $val = wc_clean(apply_filters(self::FILTER_NAME_SHORT_TITLE, $this->mapper->map(ImportMapperFormFields::TITLE)));
             }
+            $wc_product->set_name($val);
         }
         return $wc_product;
     }
     private function update_description(WC_Product $wc_product): WC_Product
     {
         if ($this->mapper->is_product_field_group_should_be_mapped($wc_product, ImportOptionsFormFields::SYNC_FIELD_OPTION_DESCRIPTION)) {
+            $val = '';
             if ($this->mapper->has_value_to_map(ImportMapperFormFields::CONTENT)) {
-                $wc_product->set_description(apply_filters(self::FILTER_NAME_DESCRIPTION, $this->mapper->map(ImportMapperFormFields::CONTENT)));
+                $val = apply_filters(self::FILTER_NAME_DESCRIPTION, $this->mapper->map(ImportMapperFormFields::CONTENT));
             }
+            $wc_product->set_description($val);
         }
         return $wc_product;
     }
     private function update_short_description(WC_Product $wc_product): WC_Product
     {
         if ($this->mapper->is_product_field_group_should_be_mapped($wc_product, ImportOptionsFormFields::SYNC_FIELD_OPTION_SHORT_DESCRIPTION)) {
+            $val = '';
             if ($this->mapper->has_value_to_map(ImportMapperFormFields::EXCERPT)) {
-                $wc_product->set_short_description(apply_filters(self::FILTER_NAME_SHORT_DESCRIPTION, $this->mapper->map(ImportMapperFormFields::EXCERPT)));
+                $val = apply_filters(self::FILTER_NAME_SHORT_DESCRIPTION, $this->mapper->map(ImportMapperFormFields::EXCERPT));
             }
+            $wc_product->set_short_description($val);
         }
         return $wc_product;
     }
@@ -128,11 +139,24 @@ class ProductMapperService implements ProductMapperServiceInterface
         }
         return $wc_product;
     }
+    private function update_unique_custom_product_id(WC_Product $wc_product): WC_Product
+    {
+        $val = '';
+        if ($this->mapper->has_value_to_map(ImportMapperFormFields::PRODUCT_CUSTOM_ID)) {
+            $custom_id = wc_clean(trim($this->mapper->map(ImportMapperFormFields::PRODUCT_CUSTOM_ID)));
+            $val = esc_html($custom_id);
+        }
+        $wc_product->update_meta_data(ProductDAO::PRODUCT_CUSTOM_ID_META, $val);
+        return $wc_product;
+    }
     private function update_ean(WC_Product $wc_product): WC_Product
     {
-        if ($this->mapper->has_value_to_map(ImportMapperFormFields::PRODUCT_EAN)) {
-            $ean = wc_clean(trim($this->mapper->map(ImportMapperFormFields::PRODUCT_EAN)));
-            FlexibleEanIntegration::add_ean_field($wc_product, $ean);
+        if ($this->mapper->is_product_field_group_should_be_mapped($wc_product, ImportOptionsFormFields::SYNC_FIELD_OPTION_EAN)) {
+            $ean = '';
+            if ($this->mapper->has_value_to_map(ImportMapperFormFields::PRODUCT_EAN)) {
+                $ean = wc_clean(trim($this->mapper->map(ImportMapperFormFields::PRODUCT_EAN)));
+            }
+            ProductDAO::add_ean_field($wc_product, $ean);
         }
         return $wc_product;
     }
@@ -278,7 +302,7 @@ class ProductMapperService implements ProductMapperServiceInterface
                 if ($this->mapper->has_value_to_map(ImportMapperFormFields::PRODUCT_LOW_STOCK)) {
                     $wc_product->set_low_stock_amount($this->format_number($this->mapper->map(ImportMapperFormFields::PRODUCT_LOW_STOCK)));
                 }
-            } else if ($this->mapper->has_value_to_map(ImportMapperFormFields::PRODUCT_STOCK_STATUS)) {
+            } elseif ($this->mapper->has_value_to_map(ImportMapperFormFields::PRODUCT_STOCK_STATUS)) {
                 $wc_product->set_stock_status($this->mapper->map(ImportMapperFormFields::PRODUCT_STOCK_STATUS));
             }
             $wc_product->set_sold_individually($this->mapper->map(ImportMapperFormFields::PRODUCT_SOLD_INDIVIDUALLY) === CheckboxField::VALUE_TRUE ? \true : \false);
@@ -338,5 +362,20 @@ class ProductMapperService implements ProductMapperServiceInterface
             }
         }
         return $result;
+    }
+    private function update_gpsr(WC_Product $wc_product): WC_Product
+    {
+        $gpsr_fields = [GPSRComponent::MANUFACTURER_NAME => GPSRIntegration::GPSR_MANUFACTURER_NAME_META, GPSRComponent::MANUFACTURER_ADDRESS => GPSRIntegration::GPSR_MANUFACTURER_ADDRESS_META, GPSRComponent::MANUFACTURER_EMAIL => GPSRIntegration::GPSR_MANUFACTURER_EMAIL_META, GPSRComponent::IMPORTER_NAME => GPSRIntegration::GPSR_IMPORTER_NAME_META, GPSRComponent::IMPORTER_ADDRESS => GPSRIntegration::GPSR_IMPORTER_ADDRESS_META, GPSRComponent::IMPORTER_EMAIL => GPSRIntegration::GPSR_IMPORTER_EMAIL_META, GPSRComponent::DETAILS_TRADEMARK => GPSRIntegration::GPSR_TRADEMARK_META, GPSRComponent::DETAILS_CERTIFICATES => GPSRIntegration::GPSR_CERTIFICATES_META, GPSRComponent::USAGE_INSTRUCTIONS_TEXT => GPSRIntegration::GPSR_INSTRUCTIONS_TEXT_META];
+        if (GPSRIntegration::is_active() && $this->mapper->is_product_field_group_should_be_mapped($wc_product, ImportOptionsFormFields::SYNC_FIELD_OPTION_GPSR)) {
+            $wc_product->update_meta_data(GPSRIntegration::GPSR_INSTRUCTIONS_TYPE_META, GPSRIntegration::GPSR_INSTRUCTIONS_TYPE_DEFAULT_VALUE);
+            foreach ($gpsr_fields as $field_key => $meta_key) {
+                $val = '';
+                if ($this->mapper->has_value_to_map($field_key, ImportMapperFormFields::GPSR_FIELDS)) {
+                    $val = \sanitize_text_field($this->mapper->map($field_key, ImportMapperFormFields::GPSR_FIELDS));
+                }
+                $wc_product->update_meta_data($meta_key, $val);
+            }
+        }
+        return $wc_product;
     }
 }

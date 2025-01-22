@@ -6,6 +6,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Form\ImportMapp
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Provider\Abstraction\DataProvider;
 /**
  * Class ImportMapperDataProvider, import mapper data provider.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\DataProvider
  */
 class ImportMapperDataProvider extends DropshippingDataProvider

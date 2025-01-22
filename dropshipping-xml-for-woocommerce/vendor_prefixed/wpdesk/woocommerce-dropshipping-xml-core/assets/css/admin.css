@@ -340,7 +340,7 @@
   top: -3px;
 }
 
-#product-images {
+#product-images, #product-tags {
   width: 100%;
   display: block;
 }

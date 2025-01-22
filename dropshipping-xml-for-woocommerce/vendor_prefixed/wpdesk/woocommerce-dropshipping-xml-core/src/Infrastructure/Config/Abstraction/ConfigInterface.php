@@ -5,6 +5,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastru
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Data\Abstraction\DataTypeInterface;
 /**
  * Interface ConfigInterface, abstraction layer for configuration managment class.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Config
  */
 interface ConfigInterface

@@ -17,6 +17,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Service\Mapper\
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Service\Mapper\ImportMapperService;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Service\Mapper\Product\ProductAttributeMapperService;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Service\Mapper\Product\ProductCategoryMapperService;
+use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Service\Mapper\Product\ProductTagMapperService;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Service\Mapper\Product\ProductImageMapperService;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Service\Mapper\Product\ProductMapperService;
 use DropshippingXmlFreeVendor\WPDesk\Forms\Field\CheckboxField;
@@ -362,6 +363,10 @@ class ProductCreatorService
             $keyword = wc_clean(trim($mapper->map(ImportMapperFormFields::TITLE)));
         } elseif ($selector === ImportOptionsFormFields::UNIQUE_PRODUCT_SELECTOR_SKU) {
             $keyword = wc_clean(trim($mapper->map(ImportMapperFormFields::PRODUCT_SKU)));
+        } elseif ($selector === ImportOptionsFormFields::UNIQUE_PRODUCT_SELECTOR_EAN) {
+            $keyword = wc_clean(trim($mapper->map(ImportMapperFormFields::PRODUCT_EAN)));
+        } elseif ($selector === ImportOptionsFormFields::UNIQUE_PRODUCT_SELECTOR_CUSTOM_PRODUCT_ID) {
+            $keyword = wc_clean(trim($mapper->map(ImportMapperFormFields::PRODUCT_CUSTOM_ID)));
         }
         return $this->find_product_in_db($selector, $keyword);
     }
@@ -374,6 +379,10 @@ class ProductCreatorService
                 return $this->product_dao->find_by_custom_id($custom_id, $keyword);
             } elseif (\in_array($type, self::GROUPED_TYPES) && !empty($custom_id)) {
                 return $this->product_dao->find_by_group_id($custom_id, $keyword);
+            } elseif ($type === ImportOptionsFormFields::UNIQUE_PRODUCT_SELECTOR_EAN) {
+                return $this->product_dao->find_by_ean($keyword);
+            } elseif ($type === ImportOptionsFormFields::UNIQUE_PRODUCT_SELECTOR_CUSTOM_PRODUCT_ID) {
+                return $this->product_dao->find_by_unique_custom_id($keyword);
             } else {
                 return $this->product_dao->find_by_name($keyword);
             }
@@ -455,8 +464,10 @@ class ProductCreatorService
         $product_attr_mapper = $this->mapper_factory->create_product_mapper(ProductAttributeMapperService::class, $parameters);
         $product_image_mapper = $this->mapper_factory->create_product_mapper(ProductImageMapperService::class, $parameters);
         $product_cat_mapper = $this->mapper_factory->create_product_mapper(ProductCategoryMapperService::class, $parameters);
+        $product_tag_mapper = $this->mapper_factory->create_product_mapper(ProductTagMapperService::class, $parameters);
         $product_mapper->update_product($product);
         $product_cat_mapper->update_product($product);
+        $product_tag_mapper->update_product($product);
         if ($product instanceof WC_Product_Variable && !$this->has_embedded_variations($mapper)) {
             $product_attr_mapper->update_for_variation(\true);
         }

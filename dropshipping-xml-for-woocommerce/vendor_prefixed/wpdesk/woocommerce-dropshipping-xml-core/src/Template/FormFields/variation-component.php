@@ -89,6 +89,15 @@ $val = $get_variation_value($item->get_name());
 $renderer->output_render('variation-form-field-select', ['field' => $item, 'renderer' => $renderer, 'name_prefix' => $name_prefix, 'value' => $val]);
 ?>
 		</div>
+	</div>
+	<div class="flex-row stretch">
+		<div class="flex-col variation-fields">
+		<?php 
+$item = $get_variation_item('variation_custom_id');
+$val = $get_variation_value($item->get_name());
+$renderer->output_render('variation-form-field-input', ['field' => $item, 'renderer' => $renderer, 'name_prefix' => $name_prefix, 'value' => $val]);
+?>
+		</div>
 	</div>	
 	<div class="flex-row stretch">
 		<div class="flex-col variation-fields">
@@ -289,6 +298,34 @@ $renderer->output_render('attributes-component', ['field' => $item, 'renderer' =
 ?>
 		</div>
 	</div>
+	<div class="flex-row stretch">
+		<div class="flex-col variation-fields" style="width:100%">
+			<?php 
+$item = $get_variation_item('variation_attribute_line');
+$val = $get_variation_value($item->get_name());
+$renderer->output_render('variation-form-field-input', ['field' => $item, 'renderer' => $renderer, 'name_prefix' => $name_prefix, 'value' => $val]);
+?>
+		</div>
+	</div>	
+	<div class="flex-row stretch">
+		<div class="flex-col variation-fields" style="width:50%">
+			<?php 
+$item = $get_variation_item('variation_attribute_line_separator');
+$val = $get_variation_value($item->get_name());
+$val = empty($val) ? $item->get_default_value() : $val;
+$renderer->output_render('variation-form-field-input', ['field' => $item, 'renderer' => $renderer, 'name_prefix' => $name_prefix, 'value' => $val]);
+?>
+		</div>
+		<div class="flex-col variation-fields" style="width:50%">
+			<?php 
+$item = $get_variation_item('variation_attribute_line_value_separator');
+$val = $get_variation_value($item->get_name());
+$val = empty($val) ? $item->get_default_value() : $val;
+$renderer->output_render('variation-form-field-input', ['field' => $item, 'renderer' => $renderer, 'name_prefix' => $name_prefix, 'value' => $val]);
+?>
+		</div>
+	</div>
+
 	<div class="flex-row stretch">
 		<div class="flex-col variation-fields" style="width:50%">
 		<?php 

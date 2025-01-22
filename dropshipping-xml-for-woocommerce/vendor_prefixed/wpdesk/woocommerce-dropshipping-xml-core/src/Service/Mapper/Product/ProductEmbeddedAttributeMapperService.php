@@ -29,4 +29,16 @@ class ProductEmbeddedAttributeMapperService extends ProductAttributeMapperServic
     {
         return CheckboxField::VALUE_TRUE === $this->mapper->get_raw_value(VariationComponent::PRODUCT_ATTRIBUTE_AS_TAXONOMY, ImportMapperFormFields::VARIATION_EMBEDDED);
     }
+    protected function get_line_attributes_from_field(): string
+    {
+        return $this->mapper->map(VariationComponent::PRODUCT_ATTRIBUTE_LINE, ImportMapperFormFields::VARIATION_EMBEDDED) ?? '';
+    }
+    protected function get_line_attributes_separator_from_field(): string
+    {
+        return $this->mapper->get_raw_value(VariationComponent::PRODUCT_ATTRIBUTE_LINE_SEPARATOR, ImportMapperFormFields::VARIATION_EMBEDDED) ?? ',';
+    }
+    protected function get_line_attributes_value_separator_from_field(): string
+    {
+        return $this->mapper->get_raw_value(VariationComponent::PRODUCT_ATTRIBUTE_LINE_VALUE_SEPARATOR, ImportMapperFormFields::VARIATION_EMBEDDED) ?? ':';
+    }
 }

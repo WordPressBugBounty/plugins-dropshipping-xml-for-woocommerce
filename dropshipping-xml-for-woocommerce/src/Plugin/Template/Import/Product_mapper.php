@@ -247,6 +247,20 @@ $form->form_start(
 								</div>
 								<div class="options_group">
 									<p class="form-field">
+										<?php $form->show_label( 'attribute_line', [ 'template' => 'label' ] ); ?>
+										<?php $form->show_field( 'attribute_line' ); ?>
+									</p>
+									<p class="form-field">
+										<?php $form->show_label( 'attribute_line_separator', [ 'template' => 'label' ] ); ?>
+										<?php $form->show_field( 'attribute_line_separator' ); ?>
+									</p>
+									<p class="form-field">
+										<?php $form->show_label( 'attribute_line_value_separator', [ 'template' => 'label' ] ); ?>
+										<?php $form->show_field( 'attribute_line_value_separator' ); ?>
+									</p>
+								</div>
+								<div class="options_group">
+									<p class="form-field">
 										<?php $form->show_label( 'attribute_as_taxonomy', [ 'template' => 'label' ] ); ?>
 										<?php $form->show_field( 'attribute_as_taxonomy' ); ?>
 										<?php echo wp_kses_post( wc_help_tip( __( 'Attributes added as taxonomy are available globally to the entire site.', 'dropshipping-xml-for-woocommerce' ) ) ); ?>
@@ -389,6 +403,32 @@ $form->form_start(
 							$form->show_field( 'excerpt' );
 							?>
 						</div>
+					</div>
+				</div>
+
+				<div class="postbox group-switch">
+					<h2 class="group-switcher"><span><?php echo esc_html( __( 'Custom product ID', 'woocommerce-dropshipping-xml-core' ) ); ?></span> <span class="group-arrow dashicons dashicons-arrow-down"></span></h2>
+					<div class="inside" style="padding: 10px">
+						<p class="form-field">
+							<label>
+								<?php $form->show_label( 'custom_id' ); ?>
+							</label>
+						</p>
+						<p class="form-field"><?php $form->show_field( 'custom_id' ); ?></p>
+					</div>
+				</div>
+
+				<div id="woocommerce-product-tags" class="postbox group-switch">
+					<h2 class="group-switcher"><span><?php echo esc_html__( 'Tags', 'woocommerce-dropshipping-xml-core' ); ?></span>  <span class="group-arrow dashicons dashicons-arrow-down"></span></h2>
+					<div class="inside" style="padding: 10px">
+						<p><?php echo wp_kses_post( __( 'Tags detected below will be added to the product.', 'woocommerce-dropshipping-xml-core' ) ); ?></p>
+						<p class="form-field">
+							<label>
+								<?php $form->show_label( 'tags_separator' ); ?><?php $form->show_field( 'tags_separator' ); ?>
+							</label>
+							<?php echo wp_kses_post( wc_help_tip( __( 'Type in a separator character which will be used in the field below to separate tags.', 'woocommerce-dropshipping-xml-core' ) ) ); ?>
+						</p>
+						<p class="form-field"><?php $form->show_field( 'product-tags' ); ?></p>
 					</div>
 				</div>
 
@@ -542,6 +582,11 @@ $form->form_start(
 					</div>
 				</div>
 
+				<?php
+				if ( $form->has_field( 'gpsr_fields' ) ) {
+						$form->show_field( 'gpsr_fields' );
+				}
+				?>
 
 			</div><!-- /post-body -->
 			<br class="clear">

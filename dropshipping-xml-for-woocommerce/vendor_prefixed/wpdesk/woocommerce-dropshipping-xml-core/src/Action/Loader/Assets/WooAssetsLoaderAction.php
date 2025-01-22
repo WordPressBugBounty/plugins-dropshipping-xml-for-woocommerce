@@ -39,8 +39,8 @@ class WooAssetsLoaderAction implements Hookable, Conditional
     }
     public function hooks()
     {
-        add_filter('woocommerce_screen_ids', array($this, 'update_woo_screen_ids'), 10, 1);
-        add_action('admin_enqueue_scripts', array($this, 'load_woocommerce_scripts'), 90);
+        add_filter('woocommerce_screen_ids', [$this, 'update_woo_screen_ids'], 10, 1);
+        add_action('admin_enqueue_scripts', [$this, 'load_woocommerce_scripts'], 90);
     }
     public function update_woo_screen_ids($screen_ids)
     {
@@ -51,8 +51,8 @@ class WooAssetsLoaderAction implements Hookable, Conditional
         $suffix = \true === $this->config->get_param('plugin.development')->get() ? '' : '.min';
         $version = $this->config->get_param('plugin.version')->get();
         wp_enqueue_media();
-        wp_register_script('wc-admin-product-meta-boxes', WC()->plugin_url() . '/assets/js/admin/meta-boxes-product' . $suffix . '.js', array('wc-admin-meta-boxes', 'media-models'), $version);
-        wp_register_script('wc-admin-variation-meta-boxes', WC()->plugin_url() . '/assets/js/admin/meta-boxes-product-variation' . $suffix . '.js', array('wc-admin-meta-boxes', 'serializejson', 'media-models'), $version);
+        wp_register_script('wc-admin-product-meta-boxes', WC()->plugin_url() . '/assets/js/admin/meta-boxes-product' . $suffix . '.js', ['wc-admin-meta-boxes', 'media-models'], $version);
+        wp_register_script('wc-admin-variation-meta-boxes', WC()->plugin_url() . '/assets/js/admin/meta-boxes-product-variation' . $suffix . '.js', ['wc-admin-meta-boxes', 'serializejson', 'media-models'], $version);
         wp_enqueue_script('wc-admin-product-meta-boxes');
         wp_enqueue_script('wc-admin-variation-meta-boxes');
         wp_localize_script('wc-admin-variation-meta-boxes', 'woocommerce_admin_meta_boxes_variations', $this->get_variation_meta_boxes_params());
@@ -104,11 +104,11 @@ class WooAssetsLoaderAction implements Hookable, Conditional
             'currency_format_symbol' => get_woocommerce_currency_symbol(''),
             'currency_format_decimal_sep' => esc_attr(wc_get_price_decimal_separator()),
             'currency_format_thousand_sep' => esc_attr(wc_get_price_thousand_separator()),
-            'currency_format' => esc_attr(str_replace(array('%1$s', '%2$s'), array('%s', '%v'), get_woocommerce_price_format())),
+            'currency_format' => esc_attr(str_replace(['%1$s', '%2$s'], ['%s', '%v'], get_woocommerce_price_format())),
             // For accounting JS.
             'rounding_precision' => wc_get_rounding_precision(),
             'tax_rounding_mode' => wc_get_tax_rounding_mode(),
-            'product_types' => array_unique(array_merge(array('simple', 'grouped', 'variable', 'external'), array_keys(wc_get_product_types()))),
+            'product_types' => array_unique(array_merge(['simple', 'grouped', 'variable', 'external'], array_keys(wc_get_product_types()))),
             'i18n_download_permission_fail' => __('Could not grant access - the user may already have permission for this file or billing email is not set. Ensure the billing email is set, and the order has been saved.', 'woocommerce'),
             'i18n_permission_revoke' => __('Are you sure you want to revoke access to this download?', 'woocommerce'),
             'i18n_tax_rate_already_exists' => __('You cannot add the same tax rate twice!', 'woocommerce'),

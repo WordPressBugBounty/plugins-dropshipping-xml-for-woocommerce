@@ -6,12 +6,14 @@ use Exception;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Service\Dependency\Binder\Abstraction\DependencyBinderCollectionInterface;
 /**
  * Class DependencyBinderCollection
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Container
  */
 class DependencyBinderCollection implements DependencyBinderCollectionInterface
 {
     /**
      * Binded class names.
+     *
      * @var array
      */
     private $binded = [];

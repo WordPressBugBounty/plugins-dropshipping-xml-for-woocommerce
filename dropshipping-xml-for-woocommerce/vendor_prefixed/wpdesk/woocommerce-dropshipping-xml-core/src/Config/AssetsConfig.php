@@ -5,6 +5,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Config;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Config\Abstraction\AbstractSingleConfig;
 /**
  * Class AssetsConfig, configuration class for assets.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Config
  */
 class AssetsConfig extends AbstractSingleConfig

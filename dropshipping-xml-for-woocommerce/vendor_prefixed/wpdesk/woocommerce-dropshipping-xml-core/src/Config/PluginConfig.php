@@ -41,7 +41,7 @@ class PluginConfig extends AbstractSingleConfig
      */
     private $plugin_slug;
     /**
-     * 
+     *
      * @var string
      */
     private $marketing_slug;

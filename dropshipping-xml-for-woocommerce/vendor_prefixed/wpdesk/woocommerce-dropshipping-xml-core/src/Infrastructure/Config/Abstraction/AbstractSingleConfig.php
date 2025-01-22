@@ -4,6 +4,7 @@ namespace DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastru
 
 /**
  * Class AbstractSingleConfig, abstraction layer for single configuration. It allows to store of individual specific configurations in ConfigInterface.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Infrastructure\Config
  */
 abstract class AbstractSingleConfig

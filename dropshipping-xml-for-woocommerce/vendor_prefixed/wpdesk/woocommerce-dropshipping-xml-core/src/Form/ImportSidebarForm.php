@@ -6,6 +6,7 @@ use DropshippingXmlFreeVendor\WPDesk\Forms\Form\FormWithFields;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Form\Abstraction\FormIdentity;
 /**
  * Class ImportSidebarForm, import options form.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Form
  */
 class ImportSidebarForm extends FormWithFields implements FormIdentity

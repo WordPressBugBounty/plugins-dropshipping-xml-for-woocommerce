@@ -13,6 +13,7 @@ use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Action\View\Imp
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Entity\Import;
 /**
  * Class ImportManagerDeleteProcessAction, import delete process over import manager.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Action\Process
  */
 class ImportManagerStopProcessAction implements Conditional, Initable

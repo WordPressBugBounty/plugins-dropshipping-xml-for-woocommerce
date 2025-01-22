@@ -6,6 +6,7 @@ use DropshippingXmlFreeVendor\WPDesk\Forms\Form\FormWithFields;
 use DropshippingXmlFreeVendor\WPDesk\Library\DropshippingXmlCore\Infrastructure\Form\Abstraction\FormIdentity;
 /**
  * Class ImportCsvSelectorForm, import csv selector form.
+ *
  * @package WPDesk\Library\DropshippingXmlCore\Form
  */
 class ImportCsvSelectorForm extends FormWithFields implements FormIdentity
