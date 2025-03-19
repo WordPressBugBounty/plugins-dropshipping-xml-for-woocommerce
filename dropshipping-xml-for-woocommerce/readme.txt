@@ -5,7 +5,7 @@ Tags: import products, dropshipping, woocommerce import products, woocommerce dr
 Requires at least: 5.2
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.6.7
+Stable tag: 1.6.8
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -56,20 +56,26 @@ See the main features of the plugin:
 * The File Preview to easily see the structure of the imported file,
 * **Import Simple and Variable WooCommerce Products**,
 * Update only previously imported products,
+* Match products based on SKU, product name, EAN, or unique product identifier,
 * Create new products, also as drafts,
 * Start, stop, and pause the import process,
 * **Map fields from the file to WooCommerce products parameters**,
 * Import WooCommerce products with names, descriptions, short descriptions,
+* Import product attributes from one line,
+* Map tags for imported products,
 * **Select the product fields to import and add your own values**,
 * Visual and Classic Editor for description and short description,
 * **Import WooCommerce products with regular prices, sale prices, and tax settings**,
 * Import WooCommerce products with their **images, attributes, stock, SKU, and other product fields**,
+* **Import product EAN** and update products based on EAN with [Flexible EAN for WooCommerce](https://wordpress.org/plugins/flexible-ean-for-woocommerce/),
+* The plugin can also **import GPSR data** (manufacturer, importer, other details, and usage instructions) using the [GPSR for WooCommerce](https://wordpress.org/plugins/gpsr-for-woocommerce/) free plugin, 
 * **Create products in a selected category or map categories**,
 * **Import product categories with a tree structure dynamically**,
 * Change the stock to 0 if the previously added product will not be available in the import, or leave the stock unchanged,
 * Choose which product fields to import/ update and which ones to skip,
 * **Drag & Drop XML or CSV fields in the Product mapper with ease**,
 * **Use multiple fields, add your custom text as well**,
+* Log and save import logs,
 * Support tab and clear documentation,
 * Clear interface,
 * Import Log.
@@ -205,6 +211,8 @@ In the built-in WordPress tools, you can't see the file structure before the pro
 
 You need the right tool to properly import WooCommerce products and update their data. You can set the plugin to import WooCommerce products in a few minutes. Then you may decide which product data fields to update during the next product imports. Also, you can import multiple product feeds at the same time. It will allow your WooCommerce to import products and update them simultaneously and based on the product SKU, name, or advanced rules for variable products. Choose the plugin to import products into your WooCommerce with the confidence and a lot of flexibility you need.
 
+You may also match products based on EAN or unique product identifier, import product EAN - with [Flexible EAN for WooCommerce](https://wordpress.org/plugins/flexible-ean-for-woocommerce/), and GPSR details - with [GPSR for WooCommerce](https://wordpress.org/plugins/gpsr-for-woocommerce/).
+
 = Where can I find an XML/ CSV file? =
 
 You may contact your wholesaler and ask for the URL address of the feed (XML or CSV). You can also use a feed with exported products from other stores or platforms. Ask for the location of the file. Or add it to your server. Then you are ready to import products to your WooCommerce.
@@ -253,6 +261,8 @@ Yes. You may map the field with the URL path to the image in the Product mapper.
 
 Yes. The plugin lets you import any number of product attributes to WooCommerce products. If you wish that attributes are added globally & available for all products in your store, you may [upgrade to PRO &rarr;](https://www.wpdesk.net/products/dropshipping-xml-woocommerce/?utm_source=wordpress-org&utm_medium=link&utm_campaign=dropshipping).
 
+It's also possible to import product attributes from one line, and map tags for imported products.
+
 = Can the Dropshipping XML for WooCommerce plugin import product categories? =
 
 Yes. The plugin allows you to set one category for imported products or map categories from the feed with existing product categories in WooCommerce. You may read more about mapping categories in the [plugin documentation](https://www.wpdesk.net/docs/dropshipping-xml-woocommerce/#Categories). In the PRO version of the plugin, you may also automatically create new product categories during the import and updates of your WooCommerce products.
@@ -272,6 +282,8 @@ Sometimes it may happen when you change the name or SKU of your products before 
 Check the products' identifier - which is the name or SKU in the Import options. Go to the Dropshipping XML tab &rarr; Import Manager &rarr; Choose the file &rarr; click Edit options &rarr; check the Import into products on the basis of the setting. Read more about Import options in the [plugin documentation](https://www.wpdesk.net/docs/dropshipping-xml-woocommerce/#Step_4_Import_options).
 
 For variable products, this setting is visible in the Product mapper. Go to the Dropshipping XML tab &rarr; Import Manager &rarr; Choose the file &rarr; click Edit mapper &rarr; Product Data metabox &rarr; Variants &rarr; check the option. You may read more about Import options in the [plugin documentation](https://www.wpdesk.net/docs/dropshipping-xml-woocommerce/#Step_4_Import_options). Read more about settings for variants in the [plugin documentation](https://www.wpdesk.net/docs/dropshipping-xml-woocommerce/#Variable_Products).
+
+You may also check out the import log as the plugin saves logs for product imports/ updates.
 
 = My products disappeared from my store after the update. What could've happened? =
 
@@ -309,6 +321,8 @@ Read more about [exporting WooCommerce products &rarr;](https://wpdesk.net/blog/
 
 Yes. Check out our [**free WooCommerce plugins &rarr;**](https://profiles.wordpress.org/wpdesk/#content-plugins) or go directly to the plugin you need:
 
+* [**Flexible EAN for WooCommerce**](https://wordpress.org/plugins/flexible-ean-for-woocommerce/) - add product EAN. The plugin is compatible with Dropshipping XML for WooCommerce.
+* [**GSPR for WooCommerce**](https://wordpress.org/plugins/gpsr-for-woocommerce/) - GPSR details for WooCommerce products. The extension is also compatible with Dropshipping XML for WooCommerce.
 * [**Flexible Invoices**](https://wordpress.org/plugins/flexible-invoices/) - create, send, and customize PDF invoices for WordPress and WooCommerce orders.
 * [**Custom Price**](https://wordpress.org/plugins/custom-price-for-woocommerce/) - let customers name the prices of WooCommerce products. Receive donations or sell WooCommerce products with custom prices.
 * [**Flexible Checkout Fields**](https://wordpress.org/plugins/flexible-checkout-fields/) - add, remove, and manage custom fields on the WooCommerce checkout page. Customize checkout fields for faster shopping and higher conversions.
@@ -350,8 +364,17 @@ Yes. Check out our [**free WooCommerce plugins &rarr;**](https://profiles.wordpr
 28. Clone the product import to easily use the same file with different settings
 29. Decide how many WooCommerce products should the plugin import in one batch
 30. Use a step-by-step guide to import and bulk update products in WooCommerce
+31. Import products based on SKU, product name, custom product ID, or EAN
+32. Import products with EAN in WooCommerce
+33. Update products based on unique product ID
+34. Import products with attributes (in a single node) into WooCommerce
+35. Import products with GPSR details in WooCommerce
+36. Product import logs in the plugin
 
 == Changelog ==
+
+= 1.6.8 - 2025-01-22 =
+* Update libraries
 
 = 1.6.7 - 2025-01-22 =
 * Added product tags mapper
