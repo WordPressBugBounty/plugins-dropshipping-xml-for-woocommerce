@@ -4,15 +4,15 @@
  * Plugin URI: https://www.wpdesk.net/products/dropshipping-xml-woocommerce/
  * Description: Import wholesale products to your store. Synchronize your WooCommerce products with the current offer of your suppliers.
  * Product: Dropshipping XML for WooCommerce
- * Version: 1.6.8
+ * Version: 1.6.9
  * Author: WP Desk
  * Author URI: https://www.wpdesk.net/
  * Text Domain: dropshipping-xml-for-woocommerce
  * Domain Path: /lang/
  * Requires at least: 6.4
  * Tested up to: 6.7
- * WC requires at least: 9.1
- * WC tested up to: 9.4
+ * WC requires at least: 9.4
+ * WC tested up to: 9.8
  * Requires PHP: 7.4
  *
  * Copyright 2016 WP Desk Ltd.
@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 } // Exit if accessed directly
 
 /* THESE TWO VARIABLES CAN BE CHANGED AUTOMATICALLY */
-$plugin_version = '1.6.8';
+$plugin_version = '1.6.9';
 $plugin_release_timestamp = '2023-11-15 15:31';
 
 $plugin_name        = 'Dropshipping XML for WooCommerce';
