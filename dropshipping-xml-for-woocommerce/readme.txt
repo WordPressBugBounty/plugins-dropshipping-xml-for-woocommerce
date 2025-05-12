@@ -3,9 +3,9 @@ Contributors: wpdesk,piotrpo,marcinkolanko
 Donate link: https://www.wpdesk.net/products/dropshipping-xml-woocommerce/
 Tags: import products, dropshipping, woocommerce import products, woocommerce dropshipping, dropshipping woocommerce
 Requires at least: 5.2
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.6.9
+Stable tag: 1.6.10
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -372,6 +372,9 @@ Yes. Check out our [**free WooCommerce plugins &rarr;**](https://profiles.wordpr
 36. Product import logs in the plugin
 
 == Changelog ==
+
+= 1.6.10 - 2025-05-12 =
+* Added support for WordPress 6.8
 
 = 1.6.9 - 2025-03-21 =
 * Added support for WooCommerce 9.8
