@@ -42,7 +42,7 @@ if ($format === 'csv') {
 }
 ?>
 		<p style="font-weight: bold;"><?php 
-echo \wp_kses_post(\__('Read more in the <a href="https://wpde.sk/dropshipping-import" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce'));
+echo \wp_kses_post(\__('Read more in the <a href="https://wpdesk.link/dropshipping-import" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce'));
 ?></p>
 	<hr>
 

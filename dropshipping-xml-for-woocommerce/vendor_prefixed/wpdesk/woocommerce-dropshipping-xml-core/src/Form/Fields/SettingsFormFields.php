@@ -23,6 +23,6 @@ class SettingsFormFields implements FieldProvider
      */
     public function get_fields()
     {
-        return [(new InputNumberField())->set_label(__('Products in one batch', 'dropshipping-xml-for-woocommerce'))->set_description(__('Number of products imported in batch. <b>Read more in the</b> <a href="https://wpde.sk/dropshipping-settings" class="docs-url" target="_blank" >plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce'))->set_default_value(self::DEFAULT_IN_BATCH)->set_name(self::INPUT_TEXT_BATCH), (new SubmitField())->set_name(self::SUBMIT_SAVE)->set_label(__('Save settings', 'dropshipping-xml-for-woocommerce'))->add_class('button button-primary')->set_attribute('id', 'save'), (new NoOnceField(self::NONCE_ACTION))->set_name(self::NONCE_NAME)];
+        return [(new InputNumberField())->set_label(__('Products in one batch', 'dropshipping-xml-for-woocommerce'))->set_description(__('Number of products imported in batch. <b>Read more in the</b> <a href="https://wpdesk.link/dropshipping-settings" class="docs-url" target="_blank" >plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce'))->set_default_value(self::DEFAULT_IN_BATCH)->set_name(self::INPUT_TEXT_BATCH), (new SubmitField())->set_name(self::SUBMIT_SAVE)->set_label(__('Save settings', 'dropshipping-xml-for-woocommerce'))->add_class('button button-primary')->set_attribute('id', 'save'), (new NoOnceField(self::NONCE_ACTION))->set_name(self::NONCE_NAME)];
     }
 }

@@ -61,10 +61,10 @@ $renderer->output_render('Header', ['title' => $title, 'header_url' => $header_u
 ?>
 
 <p style="font-weight:bold;"><?php 
-echo \wp_kses_post(\__('Read more in the <a href="https://wpde.sk/dropshipping-import-2" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce'));
+echo \wp_kses_post(\__('Read more in the <a href="https://wpdesk.link/dropshipping-import-2" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce'));
 ?></p>
 <p><?php 
-echo \wp_kses_post(\__('Have you encountered any problems with the import or want to know more? <a href="https://wpde.sk/dropshipping-faq" class="docs-url" target="_blank">Visit FAQ  &rarr;</a>.', 'dropshipping-xml-for-woocommerce'));
+echo \wp_kses_post(\__('Have you encountered any problems with the import or want to know more? <a href="https://wpdesk.link/dropshipping-faq" class="docs-url" target="_blank">Visit FAQ  &rarr;</a>.', 'dropshipping-xml-for-woocommerce'));
 ?></p>
 
 

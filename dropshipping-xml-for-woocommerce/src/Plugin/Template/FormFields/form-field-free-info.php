@@ -46,7 +46,7 @@ $is_pl = \get_locale() === 'pl_PL';
 		?>
 	<span class="description" style="font-weight: bold; color: black;">
 			<?php
-			echo \wp_kses_post( __( 'Read more in the <a href="https://wpde.sk/dropshipping-conditions" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce' ) );
+			echo \wp_kses_post( __( 'Read more in the <a href="https://wpdesk.link/dropshipping-conditions" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce' ) );
 			?>
 	</span>
 	<?php $url = $is_pl? 'https://www.wpdesk.pl/sklep/dropshipping-xml-woocommerce/?utm_source=wp-admin-plugins&utm_medium=link&utm_campaign=dropshipping-pro&utm_content=no-product' : 'https://wpdesk.net/products/dropshipping-xml-woocommerce/?utm_source=wp-admin-plugins&utm_medium=link&utm_campaign=dropshipping-pro&utm_content=no-product'; ?>

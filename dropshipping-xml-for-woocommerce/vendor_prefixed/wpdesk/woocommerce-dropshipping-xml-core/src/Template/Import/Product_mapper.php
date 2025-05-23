@@ -33,7 +33,7 @@ if (!$edit) {
 echo \wp_kses_post(\__('Map the tags of the supplier\'s file with the WooCommerce product fields. To do this you can drag&drop the name of the tag from the preview into the selected product field. <a href="https://www.wpdesk.pl/wp-content/uploads/2020/09/dropshipping_draganddrop.gif" class="docs-url" target="_blank">See how</a>.', 'dropshipping-xml-for-woocommerce'));
 ?></p>
 <p style="font-weight: bold;"><?php 
-echo \wp_kses_post(\__('Read more in the <a href="https://wpde.sk/dropshipping-import-3" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce'));
+echo \wp_kses_post(\__('Read more in the <a href="https://wpdesk.link/dropshipping-import-3" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce'));
 ?></p>
 <hr>
 <?php 
@@ -468,7 +468,7 @@ echo \wp_kses_post(\wc_help_tip(\__('Attributes added as taxonomy are available 
 									<h3>
 										<?php 
 /* TRANSLATORS: %s: url to docs */
-echo \wp_kses_post(\__('Read how to import variable products in <a href="https://wpde.sk/dropshipping-variants" class="docs-url" target="_blank" style="text-decoration:none">plugins docs →</a>', 'dropshipping-xml-for-woocommerce'));
+echo \wp_kses_post(\__('Read how to import variable products in <a href="https://wpdesk.link/dropshipping-variants" class="docs-url" target="_blank" style="text-decoration:none">plugins docs →</a>', 'dropshipping-xml-for-woocommerce'));
 ?>
 									</h3>
 								</div>
@@ -642,7 +642,7 @@ echo \esc_html(\__('Price modifier', 'dropshipping-xml-for-woocommerce'));
 ?></span>  <span class="group-arrow dashicons dashicons-arrow-down"></span></h2>
 					<div class="inside" style="padding: 0 10px">
 						<p style="font-weight: bold;"><?php 
-echo \wp_kses_post(\__('Read more in the <a href="https://wpde.sk/dropshipping-conditional-logic" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce'));
+echo \wp_kses_post(\__('Read more in the <a href="https://wpdesk.link/dropshipping-conditional-logic" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce'));
 ?></p>
 						<?php 
 $form->show_field('price_mod_conditions');
@@ -712,7 +712,7 @@ echo \esc_html(\__('Images', 'dropshipping-xml-for-woocommerce'));
 ?></span>  <span class="group-arrow dashicons dashicons-arrow-down"></span></h2>
 					<div class="inside" style="padding: 10px">
 						<p><?php 
-echo \wp_kses_post(\__('Image URLs detected below will be downloaded to the WordPress library and product\'s gallery. <b>Read more in the</b> <a href="https://wpde.sk/dropshipping-images-mapping" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce'));
+echo \wp_kses_post(\__('Image URLs detected below will be downloaded to the WordPress library and product\'s gallery. <b>Read more in the</b> <a href="https://wpdesk.link/dropshipping-images-mapping" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce'));
 ?></p>
 						<p class="form-field">
 							<label>
@@ -776,7 +776,7 @@ echo \esc_html(\__('Categories', 'dropshipping-xml-for-woocommerce'));
 ?></span> <span class="group-arrow dashicons dashicons-arrow-down"></span></h2>
 					<div class="inside" style="padding: 10px">
 						<p style="font-weight: bold;"><?php 
-echo \wp_kses_post(\__('Read more in the <a href="https://wpde.sk/dropshipping-categories-mapping" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce'));
+echo \wp_kses_post(\__('Read more in the <a href="https://wpdesk.link/dropshipping-categories-mapping" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce'));
 ?></p>
 						<p class="form-field">
 							<label>

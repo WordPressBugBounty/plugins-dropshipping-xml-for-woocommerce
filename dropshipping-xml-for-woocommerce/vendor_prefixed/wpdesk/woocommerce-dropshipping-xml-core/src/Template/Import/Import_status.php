@@ -77,7 +77,7 @@ echo \esc_html(\__('Stop import', 'dropshipping-xml-for-woocommerce'));
 					<tr>
 						<td class="txt-left" colspan="3">
 							<p><?php 
-echo \wp_kses_post(\__('Have you encountered any problems with the import or want to know more? <a href="https://wpde.sk/dropshipping-faq" class="docs-url" target="_blank">Visit FAQ &rarr;</a>.', 'dropshipping-xml-for-woocommerce'));
+echo \wp_kses_post(\__('Have you encountered any problems with the import or want to know more? <a href="https://wpdesk.link/dropshipping-faq" class="docs-url" target="_blank">Visit FAQ &rarr;</a>.', 'dropshipping-xml-for-woocommerce'));
 ?></p>
 						</td>
 					</tr>

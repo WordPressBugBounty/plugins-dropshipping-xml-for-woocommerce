@@ -14,11 +14,11 @@ if (!$boxes) {
     return;
 }
 if ($marketing_slug === 'woocommerce-dropshipping-xml') {
-    $get_support_url = $is_pl ? 'https://wpde.sk/dropshipping-pro-support-pl' : 'https://wpde.sk/dropshipping-pro-support';
+    $get_support_url = $is_pl ? 'https://wpdesk.link/dropshipping-pro-support-pl' : 'https://wpdesk.link/dropshipping-pro-support';
 } else {
     $get_support_url = 'https://wordpress.org/support/plugin/dropshipping-xml-for-woocommerce/';
 }
-$share_ideas_url = $is_pl ? 'https://wpde.sk/dropshipping-pro-idea-pl' : 'https://wpde.sk/dropshipping-pro-idea';
+$share_ideas_url = $is_pl ? 'https://wpdesk.link/dropshipping-pro-idea-pl' : 'https://wpdesk.link/dropshipping-pro-idea';
 ?>
 <div class="wrap">
 	<div id="marketing-page-wrapper">

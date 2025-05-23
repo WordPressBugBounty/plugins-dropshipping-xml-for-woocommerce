@@ -5,7 +5,7 @@ Tags: import products, dropshipping, woocommerce import products, woocommerce dr
 Requires at least: 5.2
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.6.10
+Stable tag: 1.6.11
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -109,7 +109,7 @@ If you need more options to control the import process you may use the PRO versi
 
 **Visit** [Dropshipping XML for WooCommerce Docs](https://www.wpdesk.net/docs/dropshipping-xml-woocommerce/?utm_source=wordpress-org&utm_medium=link&utm_campaign=dropshipping) to see how to use all options and settings of the plugin.
 
-You may test the PRO version in a [**free demo**](https://wpde.sk/wpdr-demo).
+You may test the PRO version in a [**free demo**](https://wpdesk.link/wpdr-demo).
 
 [**Upgrade to PRO &rarr;**](https://www.wpdesk.net/products/dropshipping-xml-woocommerce/?utm_source=wordpress-org&utm_medium=link&utm_campaign=dropshipping) ⭐
 
@@ -189,7 +189,7 @@ Also, you might've heard or thought about starting your business based on WooCom
 
 Download the plugin and try the free product import in WooCommerce 🚀.
 
-You may test the PRO version in a [free demo](https://wpde.sk/wpdr-demo).
+You may test the PRO version in a [free demo](https://wpdesk.link/wpdr-demo).
 
 = How can this plugin improve my work? =
 
@@ -372,6 +372,9 @@ Yes. Check out our [**free WooCommerce plugins &rarr;**](https://profiles.wordpr
 36. Product import logs in the plugin
 
 == Changelog ==
+
+= 1.6.11 - 2025-05-23 =
+* Replace faq links
 
 = 1.6.10 - 2025-05-12 =
 * Added support for WordPress 6.8

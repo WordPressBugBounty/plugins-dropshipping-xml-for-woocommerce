@@ -16,7 +16,7 @@ $renderer->output_render( 'Header', [ 'title' => $title ] );
 echo esc_html( sprintf( __( 'Step %s', 'dropshipping-xml-for-woocommerce' ), '1/4' ) );
 ?>
 </h2>
-<p><?php echo wp_kses_post( __( 'XML or CSV file import. Import a CSV or XML file using a link. Learn more about the import process and <b>Read more in the</b> <a href="https://wpde.sk/dropshipping-import" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce' ) ); ?></p>
+<p><?php echo wp_kses_post( __( 'XML or CSV file import. Import a CSV or XML file using a link. Learn more about the import process and <b>Read more in the</b> <a href="https://wpdesk.link/dropshipping-import" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce' ) ); ?></p>
 <hr>
 <?php
 $form->form_start(

@@ -22,7 +22,7 @@ $renderer->output_render( 'Header', [ 'title' => $title ] );?>
 		</h2>
 <?php endif; ?>
 <p><?php echo wp_kses_post( __( 'Set the product import cycle. Select the days of the week and hours for the cron process to run. The process will automatically synchronize the products in selected days and hours.', 'dropshipping-xml-for-woocommerce' ) ); ?></p>
-<p style="font-weight: bold;"><?php echo wp_kses_post( __( 'Read more in the <a href="https://wpde.sk/dropshipping-sync-options" class="docs-url" target="_blank">plugin documentation &rarr;</a>.', 'dropshipping-xml-for-woocommerce' ) ); ?></p>
+<p style="font-weight: bold;"><?php echo wp_kses_post( __( 'Read more in the <a href="https://wpdesk.link/dropshipping-sync-options" class="docs-url" target="_blank">plugin documentation &rarr;</a>.', 'dropshipping-xml-for-woocommerce' ) ); ?></p>
 <hr>
 
 <?php
@@ -75,7 +75,7 @@ $form->form_start(
 						<?php $form->show_field( 'cron_week_days', [ 'parent_template' => 'form-field' ] ); ?>
 						<?php $url = $is_pl? 'https://www.wpdesk.pl/sklep/dropshipping-xml-woocommerce/?utm_source=wp-admin-plugins&utm_medium=link&utm_campaign=dropshipping-pro&utm_content=cron-schedule' : 'https://wpdesk.net/products/dropshipping-xml-woocommerce/?utm_source=wp-admin-plugins&utm_medium=link&utm_campaign=dropshipping-pro&utm_content=cron-schedule' ; ?>
 						<?php $form->show_field( 'cron_hours', [ 'parent_template' => 'form-field-free', 'url' => $url ] ); ?>
-						<tr><th></th><td><?php echo wp_kses_post( __( '<b style="color:black">Read more about server requirements and cron settings in the</b> <a href="https://wpde.sk/dropshipping-req" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce' ) ); ?></p></td></tr>
+						<tr><th></th><td><?php echo wp_kses_post( __( '<b style="color:black">Read more about server requirements and cron settings in the</b> <a href="https://wpdesk.link/dropshipping-req" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce' ) ); ?></p></td></tr>
 					</tbody>
 				</table>
 			</div><!-- /post-body-content -->

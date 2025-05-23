@@ -26,7 +26,7 @@ $renderer->output_render( 'Header', [ 'title' => $title ] ); ?>
 		</h2>
 <?php endif; ?>
 <p><?php echo wp_kses_post( __( 'Map the tags of the supplier\'s file with the WooCommerce product fields. To do this you can drag&drop the name of the tag from the preview into the selected product field. <a href="https://www.wpdesk.pl/wp-content/uploads/2020/09/dropshipping_draganddrop.gif" class="docs-url" target="_blank">See how</a>.', 'dropshipping-xml-for-woocommerce' ) ); ?></p>
-<p style="font-weight: bold;"><?php echo wp_kses_post( __( 'Read more in the <a href="https://wpde.sk/dropshipping-import-3" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce' ) ); ?></p>
+<p style="font-weight: bold;"><?php echo wp_kses_post( __( 'Read more in the <a href="https://wpdesk.link/dropshipping-import-3" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce' ) ); ?></p>
 
 <hr>
 <?php
@@ -387,7 +387,7 @@ $form->form_start(
 				<div id="woocommerce-product-price-conditions" class="postbox group-switch">
 					<h2 class="group-switcher"><span><?php echo esc_html( __( 'Price modifier', 'dropshipping-xml-for-woocommerce' ) ); ?></span>  <span class="group-arrow dashicons dashicons-arrow-down"></span></h2>
 					<div class="inside" style="padding: 0 10px">
-						<p style="font-weight: bold;"><?php echo wp_kses_post( __( 'Read more in the <a href="https://wpde.sk/dropshipping-conditional-logic" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce' ) ); ?></p>
+						<p style="font-weight: bold;"><?php echo wp_kses_post( __( 'Read more in the <a href="https://wpdesk.link/dropshipping-conditional-logic" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce' ) ); ?></p>
 						<?php $url = $is_pl? 'https://www.wpdesk.pl/sklep/dropshipping-xml-woocommerce/?utm_source=wp-admin-plugins&utm_medium=link&utm_campaign=dropshipping-pro&utm_content=price-modifier' : 'https://wpdesk.net/products/dropshipping-xml-woocommerce/?utm_source=wp-admin-plugins&utm_medium=link&utm_campaign=dropshipping-pro&utm_content=price-modifier'; ?>
 						<div class="buy-pro-version"><a target="_blank" href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( __( 'Upgrade to PRO &rarr;', 'dropshipping-xml-for-woocommerce' ) ); ?> </a> <?php echo esc_html( __( 'to fully unlock this feature', 'dropshipping-xml-for-woocommerce' ) ); ?></div>
 
@@ -435,7 +435,7 @@ $form->form_start(
 				<div id="woocommerce-product-images" class="postbox group-switch">
 					<h2 class="group-switcher"><span><?php echo esc_html( __( 'Images', 'dropshipping-xml-for-woocommerce' ) ); ?></span> <span class="group-arrow dashicons dashicons-arrow-down"></span></h2>
 					<div class="inside" style="padding: 10px">
-						<p><?php echo wp_kses_post( __( 'Image URLs detected below will be downloaded to the WordPress library and product\'s gallery. <b>Read more in the</b> <a href="https://wpde.sk/dropshipping-images-mapping" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce' ) ); ?></p>
+						<p><?php echo wp_kses_post( __( 'Image URLs detected below will be downloaded to the WordPress library and product\'s gallery. <b>Read more in the</b> <a href="https://wpdesk.link/dropshipping-images-mapping" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce' ) ); ?></p>
 						<p class="form-field">
 							<label>
 								<?php $form->show_label( 'images_separator' ); ?><?php $form->show_field( 'images_separator' ); ?>
@@ -475,7 +475,7 @@ $form->form_start(
 				<div id="woocommerce-product-categories" class="postbox group-switch">
 					<h2 class="group-switcher"><span><?php echo esc_html( __( 'Categories', 'dropshipping-xml-for-woocommerce' ) ); ?></span> <span class="group-arrow dashicons dashicons-arrow-down"></span></h2>
 					<div class="inside" style="padding: 10px">
-						<p style="font-weight: bold;"><?php echo wp_kses_post( __( 'Read more in the <a href="https://wpde.sk/dropshipping-categories-mapping" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce' ) ); ?></p>
+						<p style="font-weight: bold;"><?php echo wp_kses_post( __( 'Read more in the <a href="https://wpdesk.link/dropshipping-categories-mapping" class="docs-url" target="_blank">plugin documentation &rarr;</a>', 'dropshipping-xml-for-woocommerce' ) ); ?></p>
 						<p class="form-field">
 							<label>
 								<?php $form->show_field( 'product_categories_single_id' ); ?><?php $form->show_label( 'product_categories_single_id' ); ?>
@@ -606,7 +606,7 @@ $form->form_start(
 		<span class="type_box hidden"> &mdash;
 			<label for="product-type">
 				<?php $form->show_field( 'product-type' ); ?>
-				<span style="display: inline-block; position: relative; top:5px;"><?php echo wp_kses_post( wc_help_tip( __( 'Choose the product type. Import simple and variable products. You may also import <a href="https://wpde.sk/dropshipping-affiliate" class="docs-url" target="_blank" >external/ affiliate products</a> in the PRO version.', 'dropshipping-xml-for-woocommerce' ) ) ); // phpcs:ignore ?> </span>
+				<span style="display: inline-block; position: relative; top:5px;"><?php echo wp_kses_post( wc_help_tip( __( 'Choose the product type. Import simple and variable products. You may also import <a href="https://wpdesk.link/dropshipping-affiliate" class="docs-url" target="_blank" >external/ affiliate products</a> in the PRO version.', 'dropshipping-xml-for-woocommerce' ) ) ); // phpcs:ignore ?> </span>
 			</label>
 			<label for="_virtual" class="show_if_simple">
 				<?php echo esc_html( __( 'Virtual', 'dropshipping-xml-for-woocommerce' ) ); ?>
