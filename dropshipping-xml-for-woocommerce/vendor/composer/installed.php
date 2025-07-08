@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'wpdesk/dropshipping-xml-for-woocommerce',
-        'pretty_version' => '1.6.11',
-        'version' => '1.6.11.0',
-        'reference' => '41247e3919d2707486788ae205b68a87032a3b67',
+        'pretty_version' => '1.6.13',
+        'version' => '1.6.13.0',
+        'reference' => '685ced165a4108b4db8af84dccbdfcc454c890b8',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -29,9 +29,9 @@
             'dev_requirement' => false,
         ),
         'wpdesk/dropshipping-xml-for-woocommerce' => array(
-            'pretty_version' => '1.6.11',
-            'version' => '1.6.11.0',
-            'reference' => '41247e3919d2707486788ae205b68a87032a3b67',
+            'pretty_version' => '1.6.13',
+            'version' => '1.6.13.0',
+            'reference' => '685ced165a4108b4db8af84dccbdfcc454c890b8',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

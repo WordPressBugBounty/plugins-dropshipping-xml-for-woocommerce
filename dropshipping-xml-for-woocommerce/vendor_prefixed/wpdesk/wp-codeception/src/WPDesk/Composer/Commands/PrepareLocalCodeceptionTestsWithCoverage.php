@@ -2,12 +2,8 @@
 
 namespace DropshippingXmlFreeVendor\WPDesk\Composer\Codeception\Commands;
 
-use DropshippingXmlFreeVendor\Composer\Downloader\FilesystemException;
-use DropshippingXmlFreeVendor\Symfony\Component\Console\Input\InputArgument;
 use DropshippingXmlFreeVendor\Symfony\Component\Console\Input\InputInterface;
 use DropshippingXmlFreeVendor\Symfony\Component\Console\Output\OutputInterface;
-use DropshippingXmlFreeVendor\Symfony\Component\Yaml\Exception\ParseException;
-use DropshippingXmlFreeVendor\Symfony\Component\Yaml\Yaml;
 /**
  * Codeception tests run command.
  *

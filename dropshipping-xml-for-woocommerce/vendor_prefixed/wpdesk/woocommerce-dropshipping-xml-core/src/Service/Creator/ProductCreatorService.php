@@ -162,6 +162,7 @@ class ProductCreatorService
         if (\false === $is_variation || \true === $this->is_created) {
             if (!$this->is_variation_has_parent($variable_mapper)) {
                 $variable_mapper->set_mapped_value(ImportMapperFormFields::PRODUCT_SKU, '');
+                $variable_mapper->set_mapped_value(ImportMapperFormFields::PRODUCT_EAN, '');
                 $variable_mapper->set_mapped_value(ImportMapperFormFields::PRODUCT_PRICE, '');
                 $variable_mapper->set_mapped_value(ImportMapperFormFields::PRODUCT_SALE_PRICE, '');
                 $variable_mapper->set_mapped_value(ImportMapperFormFields::PRODUCT_MANAGE_STOCK, CheckboxField::VALUE_FALSE);
